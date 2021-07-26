@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 10, 2021, 3:38:45 PM
+    Author     : Muleya
+*/
+
+.breadcrumb-banner-bg {
+    background-image: url("assets/img/breadcrumb-banner.jpg");
+    background-position: center center;
+    background-size: cover;
+    z-index: 1;
+    position: relative;
+}
+.breadcrumb-banner-bg:after {
+    background: #000 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+.discover-breadcrumb-area {
+    padding: 80px 0;
+}
+.breadcrumb-text h1 {
+    color: #fff;
+    font-weight: 900;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+}
+.breadcrumb-menu ul li {
+    color: #f41c54;
+    display: inline-block;
+    font-weight: 700;
+    padding: 0 5px;
+    position: relative;
+}
+.breadcrumb-menu ul li a {
+    color: #fff;
+}
+.breadcrumb-menu ul li:first-child:after {
+    content: "";
+}
+.breadcrumb-ceperator {
+    color: #fff;
+}
