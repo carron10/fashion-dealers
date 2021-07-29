@@ -154,8 +154,6 @@
             } else {
                 loader("stop");
             }
-      
-            
         };
 
         function loader(nn) {
@@ -183,23 +181,30 @@
     <div class="body">
         <!--Start of Navigation bar -->
         <nav class="navbar navbar-expand-md navbar-light sticky-top" style=" background-color: #cccccc">
-<a class="navbar-header" style=" padding-top: 5px" href="/index.jsp">
-                <img src="img/nust-small-logo.png" alt="logo">
-            </a>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="nav navbar-nav ml-auto">
-                    
-                    
+                <ul class="nav navbar-nav mr-auto">
+
                     <li class="nav-item active">
                         <a class="nav-link" href="#!" id="index.jsp" >HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-toggle nav-link" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            CATEGORY
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class=" dropdown-item nav-link" href="#!" id="about.jsp" >Women Wear</a>
+                            <a class="dropdown-item nav-link"  href="#!" id="terms-and-conditions.jsp" >Men Wear</a>
+                            <a class=" dropdown-item nav-link" href="#!" id="about.jsp" >Children Wear</a>
+                        </div>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="#!" id="services.jsp" >SERVICES</a>
                     </li>
-                    
+
                     <li class="nav-item ">
                         <a class="nav-link" href="#!"  id="contact.jsp">CONTACT</a>
                     </li>
@@ -212,8 +217,19 @@
                             <a class="dropdown-item nav-link"  href="#!" id="terms-and-conditions.jsp" >Terms and Conditions</a>
                         </div>
                     </li>
+
                 </ul>
+
             </div>
+            <form class="form-inline">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="search" aria-label="search" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class=" fa fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+
         </nav>
 
 
