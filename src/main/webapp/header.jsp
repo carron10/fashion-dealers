@@ -196,9 +196,9 @@
                             CATEGORY
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class=" dropdown-item nav-link" href="#!" id="about.jsp" >Women Wear</a>
-                            <a class="dropdown-item nav-link"  href="#!" id="terms-and-conditions.jsp" >Men Wear</a>
-                            <a class=" dropdown-item nav-link" href="#!" id="about.jsp" >Children Wear</a>
+                            <a class="dropdown-item nav-link" href="women-wear.jsp" >Women Wear</a>
+                            <a class="dropdown-item nav-link"  href="men-wear.jsp" >Men Wear</a>
+                            <a class="dropdown-item nav-link" href="kids-wear.jsp" >Children Wear</a>
                         </div>
                     </li>
                     <li class="nav-item ">

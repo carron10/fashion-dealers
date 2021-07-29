@@ -46,7 +46,7 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/nust1.jpg" class="d-block w-100" alt="...">
+                    <img src="image/jeans-2.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>The SRC is there for you</h5>
                         <p>We put any motivation text here.</p>
@@ -60,10 +60,10 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="image/IMG-20210726-WA0174.jpg" class="d-block w-100" alt="...">
+                    <img src="image/IMG-20210726-WA0155.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Get Libray Here</h5>
-                        <p>We put any motivation text here.</p>
+                        <p>fdsa</p>
                     </div>
                 </div>
             </div>
@@ -79,31 +79,52 @@
 
         <div class="jumbotron" style=" margin: 0px">
             <div class="text-center" style=" padding-bottom: 20px;">
-                <h3>Our services</h3>
-                <hr  class="raised line">
-                <i>Our aim is to bring the nustians together</i>
+                <h3 style=" text-decoration: underline red">Categories</h3>
+              
             </div>
-            <div class="row">
+            <div class="row mb-5">
 
                 <div class="col" style=" margin: 0; padding: 1px;">
+                    <img src="image/Fashion.jpg" style=" height: 90%; width: 100%">
+                    <div class=" card">
+                        <div class=" card-footer">
+                            Men Wear
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style=" margin: 0; padding: 1px;">
+                    <img src="image/IMG-20210729-WA0033.jpg" style=" height: 90%; width: 100%">
+                    <div class=" card">
 
-                    <img src="image/Fashion.jpg" style=" height: 100%; width: 100%">
+
+                        <div class=" card-footer">
+                            Ladies Wear
+
+                        </div>
+                    </div>        
                 </div>
                 <div class="col" style=" margin: 0; padding: 1px;">
 
-                    <img src="image/IMG-20210729-WA0033.jpg" style=" height: 100%; width: 100%">
+                    <img src="image/men-wear.PNG" style=" height: 90%; width: 100%">
+                    <div class=" card">
+
+                        <div class=" card-footer">
+                            Men Wear
+                        </div>
+
+                    </div>
                 </div>
                 <div class="col" style=" margin: 0; padding: 1px;">
+                    <img src="image/kids.jpg" style=" height: 90%; width: 100%">
+                    <div class=" card">
 
-                    <img src="image/men-wear.PNG" style=" height: 100%; width: 100%">
+                        <div class=" card-footer">
+                            Kids Wear
+
+                        </div>
+
+                    </div>
                 </div>
-                <div class="col" style=" margin: 0; padding: 1px;">
-
-                    <img src="image/kids.jpg" style=" height: 100%; width: 100%">
-                </div>
-
-
-
             </div>
         </div>
     </div>
