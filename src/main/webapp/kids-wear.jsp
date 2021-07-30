@@ -321,7 +321,7 @@
         </footer>
     </div>
     <script>
-        function load_comments(data) {
+        function load_data(data) {
             const x = JSON.parse(data);
          
             var content = "";
