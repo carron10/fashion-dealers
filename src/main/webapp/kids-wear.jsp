@@ -287,15 +287,13 @@
                 <div  id="contents" style=" margin: 0">
 
                 </div>
-                <div class="text-muted text-center bg-dark " style="height: 30px;">
-                    <div style="top: 30%"> 
-                        <a href="#!" >
-                            <span class=" fa fa-arrow-down"></span>
-                            View More
-                        </a> 
+                <div class="text-muted text-center bg-light " style="height: 40px;">
+                    <div style="top: 20%">  
+                        <div class="spinner-border spinner-border-sm mt-3" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>                            
                     </div>
                 </div>
-
             </div>
 
 
@@ -323,7 +321,7 @@
     <script>
         function load_data(data) {
             const x = JSON.parse(data);
-         
+
             var content = "";
 
             for (var i = 0; i < x.products.length; i++) {
@@ -336,52 +334,52 @@
                 var picture = x.products[i].picture;
                 var product_id = x.products[i].p_id;
                 var description = x.products[i].description;
-                var data="";
-                if((i+1)%2===0){
-                    
-                    data+="<div class=\"col-md\">\n" +
-"                                <div class=\"media p-3\">\n" +
-"                                    <img src=\"image/"+picture+"\" alt=\""+name+"\" class=\" align-self-start mr-3 mt-3\" style=\"width:150px;\">\n" +
-"                                    <div class=\"media-body\">\n" +
-"                                        <i>\n" +
-"                                            <strong>"+name+"</strong>\n" +
-"                                            <br><b>Available Sizes:</b>"+size+"\n" +
-"                                            <br><b>Years:</b>"+years+"\n" +
-"                                            <br><b>Price:</b>"+price+"\n" +
-"                                            <br><b>Item-description:</b> "+description+"..\n" +
-"                                            <br>\n" +
-"                                            <a href=\"product.jsp?\""+product_id+">View item</a>\n" +
-"                                        </i>\n" +
-"                                    </div>\n" +
-"                                </div>\n" +
-"                            </div>\n" +
-"                        </div>";
-                }else{
-                    data+="<div class=\"row\">\n" +
-"                            <div class=\"col-md\">\n" +
-"                                <div class=\"media p-3\">\n" +
-"                                    <img src=\"image/"+picture+"\" alt=\""+name+"\" class=\" align-self-start mr-3 mt-3\" style=\"width:150px;\">\n" +
-"                                    <div class=\"media-body\">\n" +
-"                                        <i>\n" +
-"                                            <strong>"+name+"</strong>\n" +
-"                                            <br><b>Available Sizes:</b>"+size+"\n" +
-"                                            <br><b>Years:</b>"+years+"\n" +
-"                                            <br><b>Price:</b>"+price+"\n" +
-"                                            <br><b>Item-description:</b> "+description+"..\n" +
-"                                            <br>\n" +
-"                                            <a href=\"product.jsp?\""+product_id+">View item</a>\n" +
-"                                        </i>\n" +
-"\n" +
-"                                    </div>\n" +
-"                                </div>\n" +
-"                            </div>\n";
+                var data = "";
+                if ((i + 1) % 2 === 0) {
+
+                    data += "<div class=\"col-md\">\n" +
+                            "                                <div class=\"media p-3\">\n" +
+                            "                                    <img src=\"image/" + picture + "\" alt=\"" + name + "\" class=\" align-self-start mr-3 mt-3\" style=\"width:150px;\">\n" +
+                            "                                    <div class=\"media-body\">\n" +
+                            "                                        <i>\n" +
+                            "                                            <strong>" + name + "</strong>\n" +
+                            "                                            <br><b>Available Sizes:</b>" + size + "\n" +
+                            "                                            <br><b>Years:</b>" + years + "\n" +
+                            "                                            <br><b>Price:</b>" + price + "\n" +
+                            "                                            <br><b>Item-description:</b> " + description + "..\n" +
+                            "                                            <br>\n" +
+                            "                                            <a href=\"product.jsp?\"" + product_id + ">View item</a>\n" +
+                            "                                        </i>\n" +
+                            "                                    </div>\n" +
+                            "                                </div>\n" +
+                            "                            </div>\n" +
+                            "                        </div>";
+                } else {
+                    data += "<div class=\"row\">\n" +
+                            "                            <div class=\"col-md\">\n" +
+                            "                                <div class=\"media p-3\">\n" +
+                            "                                    <img src=\"image/" + picture + "\" alt=\"" + name + "\" class=\" align-self-start mr-3 mt-3\" style=\"width:150px;\">\n" +
+                            "                                    <div class=\"media-body\">\n" +
+                            "                                        <i>\n" +
+                            "                                            <strong>" + name + "</strong>\n" +
+                            "                                            <br><b>Available Sizes:</b>" + size + "\n" +
+                            "                                            <br><b>Years:</b>" + years + "\n" +
+                            "                                            <br><b>Price:</b>" + price + "\n" +
+                            "                                            <br><b>Item-description:</b> " + description + "..\n" +
+                            "                                            <br>\n" +
+                            "                                            <a href=\"product.jsp?\"" + product_id + ">View item</a>\n" +
+                            "                                        </i>\n" +
+                            "\n" +
+                            "                                    </div>\n" +
+                            "                                </div>\n" +
+                            "                            </div>\n";
                 }
                 content += data;
             }
             if (content !== "") {
-                
+
                 $("#contents").html(content);
-                
+
             }
         }
         $(document).ready(function () {

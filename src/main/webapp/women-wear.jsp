@@ -129,7 +129,6 @@
             }
             .landlord-details .media{
                 border-bottom: 1px solid #d6d6d6;
-
             }
             .items{
                 height: 50px;
@@ -966,13 +965,11 @@
                             </div>
                         </div>
 
-                        <div class="text-muted text-center bg-dark " style="height: 30px;">
-                            <div style="top: 30%">  
-                                
-                                <a href="#!" >
-                                    <span class=" fa fa-arrow-down"></span>
-                                    View More
-                                </a> 
+                         <div class="text-muted text-center bg-light " style="height: 40px;">
+                            <div style="top: 20%">  
+                                <div class="spinner-border spinner-border-sm mt-3" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>                            
                             </div>
                         </div>
 
