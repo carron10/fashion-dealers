@@ -393,7 +393,6 @@
             });
             request.done(function (msg) {
                 load_data(msg);
-
             });
             // Initialize Tooltip
             $('[data-toggle="tooltip"]').tooltip();

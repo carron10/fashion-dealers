@@ -134,7 +134,7 @@
                     document.getElementById("error").innerHTML = xhttp.responseText;
                 }
             };
-            xhttp.open("Get", "store_product.jsp?" + data, true);
+            xhttp.open("Get", "store_product?" + data, true);
             xhttp.send();
         }
     </script>
