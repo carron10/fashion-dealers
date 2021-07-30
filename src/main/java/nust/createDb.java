@@ -46,15 +46,15 @@ public class createDb extends HttpServlet {
             Connection con = getConnection();
             Statement statement = con.createStatement();
             String sql = "CREATE TABLE products(\n"
-                    + "	product_id serial PRIMARY KEY,\n"
-                    + "	category VARCHAR ( 20 ),\n"
+                    + "product_id serial PRIMARY KEY,\n"
+                    + "category VARCHAR (20),\n"
                     + "price VARCHAR (100) NOT NULL,\n"
-                    + "product_name VARCHAR (100 ) NOT NULL,\n"
-                    + "size VARCHAR ( 20 ),\n"
+                    + "product_name VARCHAR (100) NOT NULL,\n"
+                    + "size VARCHAR (20),\n"
                     + "years VARCHAR (20),\n"
                     + "picture VARCHAR (200) NOT NULL,\n"
                     + "description VARCHAR (400),\n"
-                    + "	created_on TIMESTAMP default current_timestamp,\n"
+                    + "created_on TIMESTAMP default current_timestamp\n"
                     + ");";
 
             statement.execute(sql);
