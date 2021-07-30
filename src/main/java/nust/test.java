@@ -53,7 +53,6 @@ public class test extends HttpServlet {
                 statement = connection.createStatement();
           statement.executeQuery(sql);
           response.sendRedirect("execute.jsp");
-
         } catch (URISyntaxException ex) {
             Logger.getLogger(test.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
