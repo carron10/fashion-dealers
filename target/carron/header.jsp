@@ -221,14 +221,7 @@
                 </ul>
 
             </div>
-            <form class="form-inline">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="search" aria-label="search" aria-describedby="button-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="button" id="button-addon2"><i class="fa fa-search"></i></button>
-                    </div>
-                </div>
-            </form>
+            
 
         </nav>
 

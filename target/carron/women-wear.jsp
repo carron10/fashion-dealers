@@ -223,7 +223,7 @@
         </div>
         <div class="body" id="body">
             <!--Start of Navigation bar -->
-            <nav class="navbar navbar-expand-md navbar-light" style=" background-color: #cccccc">
+            <nav class="navbar navbar-expand-md navbar-light sticky-top" style=" background-color: #cccccc">
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -264,39 +264,9 @@
                     </ul>
 
                 </div>
-                <form class="form-inline">
-                    <div class="input-group">
-                        <div class="input-group-append" style=" width: 90px;">
-                            <select data-trigger="" class="form-control" name="location">
-                                <option>ALL</option>
-                                <option>Women Wear</option>
-                                <option>Men Wear</option>
-                                <option>Children Wear</option>
-                            </select>
-                        </div>
-
-                        <input type="text" class="form-control" placeholder="search" aria-label="search" aria-describedby="category">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary btn-success" type="button" id="button-addon2"><i class=" fa fa-search"></i></button>
-                        </div>
-
-                    </div>
-                </form>
+                
             </nav>
-            <nav class="navbar  navbar-light position-fixed container-fluid items" style="background-color: #ccccff; z-index: 999;">
-                <form class="form-inline">
-                    <div class="input-group">
-                        <div class="input-group-append">
-                            <p  class=" p-1">Currency:</p>
-                        </div>
-                        <select data-trigger="" class="form-control form-control-sm" name="location" >
-                            <option>USD</option>
-                            <option>RTGS/ZW</option>
-                            <option>Rands</option>
-                        </select>
-                    </div>
-                </form>
-            </nav>
+            
             <div class="container-fluid landlord-details" >  
                 <div class="row" style=" margin-top: 50px;">
                     <div class="col-sm-2 sidenav">
@@ -1031,10 +1001,10 @@
                 $(window).scroll(function () {
                     if ($(window).scrollTop() > 300) {
                         btn.addClass('show');
-                        $(".items").addClass("sticky-top");
+                      
                     } else {
                         btn.removeClass('show');
-                        $(".items").removeClass("sticky-top");
+                        
                     }
                 });
             </script>

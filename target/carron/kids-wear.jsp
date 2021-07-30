@@ -219,21 +219,6 @@
                 </button>
                 <div class="navbar-header" style=" padding-top: 5px" href="/index.jsp">
 
-                    <form class="form-inline">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-
-                                <select data-trigger="" class="form-control" name="location" id="basic-addon1">
-                                    <option>ALL</option>
-                                    <option>Women Wear</option>
-                                    <option>Men Wear</option>
-                                    <option>Children Wear</option>
-                                </select>
-
-                            </div>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                        </div>
-                    </form>
 
                 </div>
 
@@ -276,13 +261,7 @@
 
             </nav>
 
-            <div class="collapse position-fixed  container-fluid" id="sign">
-                <form class="float-right">
-                    <p class=" text-center"><strong>Sign In</strong></p>
-                    <input type="text" class=" form-control form-control-sm" placeholder="username">
-                    <input type="text" class=" form-control form-control-sm" placeholder="password">
-                </form>
-            </div>
+
             <div class="container-fluid landlord-details" >  
                 <div  id="contents" style=" margin: 0">
 
@@ -339,7 +318,7 @@
 
                     data += "<div class=\"col-md\">\n" +
                             "                                <div class=\"media p-3\">\n" +
-                            "                                    <img src=\"image/" + picture + "\" alt=\"" + name + "\" class=\" align-self-start mr-3 mt-3\" style=\"width:150px;\">\n" +
+                            "                                    <img src=\"image/" + picture + "\" alt=\"" + name + "\" class=\" align-self-start mr-3 mt-3\" style=\"width:150px; height:150px;\">\n" +
                             "                                    <div class=\"media-body\">\n" +
                             "                                        <i>\n" +
                             "                                            <strong>" + name + "</strong>\n" +
@@ -358,7 +337,7 @@
                     data += "<div class=\"row\">\n" +
                             "                            <div class=\"col-md\">\n" +
                             "                                <div class=\"media p-3\">\n" +
-                            "                                    <img src=\"image/" + picture + "\" alt=\"" + name + "\" class=\" align-self-start mr-3 mt-3\" style=\"width:150px;\">\n" +
+                            "                                    <img src=\"image/" + picture + "\" alt=\"" + name + "\" class=\" align-self-start mr-3 mt-3\" style=\"width:150px; height:150px;\">\n" +
                             "                                    <div class=\"media-body\">\n" +
                             "                                        <i>\n" +
                             "                                            <strong>" + name + "</strong>\n" +
@@ -369,7 +348,6 @@
                             "                                            <br>\n" +
                             "                                            <a href=\"product.jsp?\"" + product_id + ">View item</a>\n" +
                             "                                        </i>\n" +
-                            "\n" +
                             "                                    </div>\n" +
                             "                                </div>\n" +
                             "                            </div>\n";
