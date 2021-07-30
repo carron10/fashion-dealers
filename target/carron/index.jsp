@@ -33,6 +33,22 @@
             .media-body a:hover{
                 padding-left: 10px;
             }
+           .category{
+                width: 300px;
+                float: left;
+                padding: 2px;
+             
+            }
+            .categories{
+                margin: 30px;
+            }
+             @media screen and (max-width: 600px) {
+                 .category{
+                     width:100%;
+                     padding-bottom: 20px;
+                 } 
+            }
+            
         </style>
 
 
@@ -82,9 +98,8 @@
                 <h3 style=" text-decoration: underline red">Categories</h3>
               
             </div>
-            <div class="row mb-5">
-
-                <div class="col" style=" margin: 0; padding: 1px;">
+            <div class=" row categories">
+                <div class="category">
                     <img src="image/Fashion.jpg" style=" height: 90%; width: 100%">
                     <div class=" card">
                         <div class=" card-footer">
@@ -92,18 +107,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col" style=" margin: 0; padding: 1px;">
+                <div class="category">
                     <img src="image/IMG-20210729-WA0033.jpg" style=" height: 90%; width: 100%">
                     <div class=" card">
-
-
                         <div class=" card-footer">
                             Ladies Wear
-
                         </div>
                     </div>        
                 </div>
-                <div class="col" style=" margin: 0; padding: 1px;">
+                <div class="category">
 
                     <img src="image/men-wear.PNG" style=" height: 90%; width: 100%">
                     <div class=" card">
@@ -114,7 +126,7 @@
 
                     </div>
                 </div>
-                <div class="col" style=" margin: 0; padding: 1px;">
+                <div class="category">
                     <img src="image/kids.jpg" style=" height: 90%; width: 100%">
                     <div class=" card">
 

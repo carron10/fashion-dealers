@@ -40,18 +40,46 @@ public class createDb extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
+
         try {
             /* TODO output your page here. You may use following sample code. */
             Connection con = getConnection();
             Statement statement = con.createStatement();
-            String sql = "CREATE TABLE users(\n"
-                    + "	user_id serial PRIMARY KEY,\n"
+            String sql = "CREATE TABLE products(\n"
+                    + "	product_id serial PRIMARY KEY,\n"
+                    + "	category VARCHAR ( 20 ) default 'All',\n"
+                    + "price VARCHAR (100) NOT NULL,\n"
+                    + "product_name VARCHAR (100 ) NOT NULL,\n"
+                    + "size VARCHAR ( 20 ),\n"
+                    + "years VARCHAR (20) default 'N/A',\n"
+                    + "picture VARCHAR (200) NOT NULL,\n"
+                    + "description VARCHAR (400),\n"
+                    + "	created_on TIMESTAMP default current_timestamp,\n"
+                    + ");";
+
+            statement.execute(sql);
+            // statement.execute(comments);
+            // statement.execute(subscribe);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(createDb.class.getName()).log(Level.SEVERE, null, ex);
+            out.println(ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(createDb.class.getName()).log(Level.SEVERE, null, ex);
+            out.println(ex);
+        }
+        try {
+            /* TODO output your page here. You may use following sample code. */
+            Connection con = getConnection();
+            Statement statement = con.createStatement();
+            String sql = "CREATE TABLE customers(\n"
+                    + "	customer_id serial PRIMARY KEY,\n"
                     + "	username VARCHAR ( 20 ) UNIQUE NOT NULL,\n"
                     + "first_name  varchar(20),\n"
                     + "last_name varchar(20),\n"
                     + "	password VARCHAR ( 100) NOT NULL,\n"
-                    + "	email VARCHAR ( 100 ) UNIQUE NOT NULL,\n"
-                    + "status  BOOL DEFAULT '0',\n"
+                    + "email VARCHAR ( 100 ) UNIQUE NOT NULL,\n"
+                    + "phone VARCHAR ( 100 ) UNIQUE NOT NULL,\n"
+                    + "address VARCHAR ( 100 ) UNIQUE NOT NULL,\n"
                     + "hash_password varchar(255) UNIQUE not null,\n"
                     + "user_bio varchar(300),\n"
                     + "user_role varchar(20) not null,\n"
@@ -59,34 +87,16 @@ public class createDb extends HttpServlet {
                     + "	created_on TIMESTAMP default current_timestamp,\n"
                     + " last_login TIMESTAMP \n"
                     + ");";
-            String comments = "CREATE TABLE comments(\n"
-                    + "id serial PRIMARY KEY,\n"
-                    + "page VARCHAR ( 60 ) NOT NULL,\n"
-                    + "reply_to  varchar(20),\n"
-                    + "msg varchar(300) NOT NULL,\n"
-                    + "user_name VARCHAR ( 30 ) NOT NULL,\n"
-                    + "email VARCHAR ( 100 ) NOT NULL,\n"
-                    + "status  BOOL DEFAULT '0',\n"
-                    + "	posted_on TIMESTAMP default current_timestamp\n"
-                    + ");";
-            String subscribe = "CREATE TABLE subscribers(\n"
-                    + "id serial PRIMARY KEY,\n"
-                    + "email VARCHAR ( 100 ) UNIQUE NOT NULL,\n"
-                    + "status  BOOL DEFAULT '0',\n"
-                    + "	created_on TIMESTAMP default current_timestamp\n"
-                    + ");";
-           
-          statement.execute(sql);
-           // statement.execute(comments);
-           // statement.execute(subscribe);
+
+            statement.execute(sql);
+            // statement.execute(comments);
+            // statement.execute(subscribe);
         } catch (URISyntaxException ex) {
             Logger.getLogger(createDb.class.getName()).log(Level.SEVERE, null, ex);
             out.println(ex);
         } catch (SQLException ex) {
             Logger.getLogger(createDb.class.getName()).log(Level.SEVERE, null, ex);
             out.println(ex);
-        } finally {
-            out.close();
         }
     }
 
