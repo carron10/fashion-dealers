@@ -54,7 +54,7 @@ public class get_products extends HttpServlet {
                
                 connection = getConnection();
                 statement = connection.createStatement();
-                String sql = "select * from products where category=" + category;
+                String sql = "select * from products where category='" + category+"'";
                 if ("null".equals(category)) {
                     sql = "select * from products;";
                 }
