@@ -334,7 +334,7 @@
                 var time = x.products[i].time;
                 var cateory = x.products[i].category;
                 var picture = x.products[i].picture;
-                var product_id = x.products[i].product_id;
+                var product_id = x.products[i].p_id;
                 var description = x.products[i].description;
                 var data="";
                 if((i+1)%2===0){

@@ -66,6 +66,7 @@ public class get_products extends HttpServlet {
                     String product_name = resultSet.getString("product_name");
                     String price = resultSet.getString("price");
                     String size = resultSet.getString("size");
+                    String years = resultSet.getString("years");
                     String product_id = resultSet.getString("product_id");
                     String picture = resultSet.getString("picture");
                     String cat = resultSet.getString("category");
@@ -75,11 +76,13 @@ public class get_products extends HttpServlet {
                                 + "{\n"
                                 + "   \"name\" : \"" + product_name + "\",\n"
                                 + "   \"time\" :  \"" + time + "\",\n"
+                                        
                                 + "   \"size\" : \"" + size + "\",\n"
-                                + "\"pice\" : \"" + price + "\",\n"
+                                        + "   \"years\" : \"" + years + "\",\n"
+                                + "\"price\" : \"" + price + "\",\n"
                                 + "\"p_id\" : \"" + product_id + "\",\n"
-                                + "   \"picture\" : \"" + picture + "\"\n"
-                                + "   \"category\" : \"" + cat + "\"\n"
+                                + "   \"picture\" : \"" + picture + "\",\n"
+                                + "   \"category\" : \"" + cat + "\",\n"
                                 + "   \"description\" : \"" + description + "\"\n"
                                 + "}");
 
@@ -89,10 +92,10 @@ public class get_products extends HttpServlet {
                                 + "   \"name\" : \"" + product_name + "\",\n"
                                 + "   \"time\" :  \"" + time + "\",\n"
                                 + "   \"size\" : \"" + size + "\",\n"
-                                + "\"pice\" : \"" + price + "\",\n"
+                                + "\"price\" : \"" + price + "\",\n"
                                 + "\"p_id\" : \"" + product_id + "\",\n"
-                                + "   \"picture\" : \"" + picture + "\"\n"
-                                + "   \"category\" : \"" + cat + "\"\n"
+                                + "   \"picture\" : \"" + picture + "\",\n"
+                                + "   \"category\" : \"" + cat + "\",\n"
                                 + "   \"description\" : \"" + description + "\"\n"
                                 + "}");
                     }
