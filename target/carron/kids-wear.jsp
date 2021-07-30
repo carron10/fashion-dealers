@@ -375,7 +375,7 @@
 "                            </div>\n" +
 "                        </div>";
                 }
-                content += dat;
+                content += data;
             }
             if (content !== "") {
                 
@@ -426,12 +426,8 @@
         function hh() {
             if ($(window).scrollTop() > 300) {
                 btn.addClass('show');
-
-                $(".navx").css("visibility", "hidden");
             } else {
                 btn.removeClass('show');
-
-                $(".navx").css("visibility", "visible");
             }
         }
     </script>
