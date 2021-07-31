@@ -96,10 +96,7 @@
                 opacity: 1;
                 visibility: visible;
             }
-        </style>
-        <style>
-
-
+        
             .min, .max{
                 width: 30%;
                 display: inline-block;
@@ -113,13 +110,9 @@
                 text-decoration: underline red;
             }
 
-            /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-
-
             /* Set gray background color and 100% height */
             .sidenav {
                 padding-top: 20px;
-
                 height: 100%;
             }
             .content{
@@ -127,7 +120,6 @@
             }
             .landlord-details .media{
                 border-bottom: 1px solid #d6d6d6;
-
             }
             .items{
                 height: 50px;
@@ -147,7 +139,6 @@
             }
             #button {
                 display: inline-block;
-
                 width: 50px;
                 height: 50px;
                 text-align: center;
