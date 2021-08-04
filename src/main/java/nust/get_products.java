@@ -51,10 +51,10 @@ public class get_products extends HttpServlet {
         try {
             if (category != null) {
                 Map<String, String> coments = new TreeMap();
-               
+
                 connection = getConnection();
                 statement = connection.createStatement();
-                String sql = "select * from products where category='" + category+"'";
+                String sql = "select * from products where category='" + category + "'";
                 if ("null".equals(category)) {
                     sql = "select * from products;";
                 }
@@ -76,9 +76,8 @@ public class get_products extends HttpServlet {
                                 + "{\n"
                                 + "   \"name\" : \"" + product_name + "\",\n"
                                 + "   \"time\" :  \"" + time + "\",\n"
-                                        
                                 + "   \"size\" : \"" + size + "\",\n"
-                                        + "   \"years\" : \"" + years + "\",\n"
+                                + "   \"years\" : \"" + years + "\",\n"
                                 + "\"price\" : \"" + price + "\",\n"
                                 + "\"p_id\" : \"" + product_id + "\",\n"
                                 + "   \"picture\" : \"" + picture + "\",\n"
@@ -92,6 +91,7 @@ public class get_products extends HttpServlet {
                                 + "   \"name\" : \"" + product_name + "\",\n"
                                 + "   \"time\" :  \"" + time + "\",\n"
                                 + "   \"size\" : \"" + size + "\",\n"
+                                + "   \"years\" : \"" + years + "\",\n"
                                 + "\"price\" : \"" + price + "\",\n"
                                 + "\"p_id\" : \"" + product_id + "\",\n"
                                 + "   \"picture\" : \"" + picture + "\",\n"
