@@ -60,7 +60,7 @@ public class get_products extends HttpServlet {
                 }
                 resultSet = statement.executeQuery(sql);
                 String products = null;
-                int num = 0;
+                int II = 0;
                 while (resultSet.next()) {
                     String time = resultSet.getString("created_on");
                     String product_name = resultSet.getString("product_name");
@@ -71,10 +71,10 @@ public class get_products extends HttpServlet {
                     String picture = resultSet.getString("picture");
                     String cat = resultSet.getString("category");
                     String description = resultSet.getString("description");
-                    if (num == 0) {
+                    if (II == 0) {
                         coments.put(product_id , ""
                                 + "{\n"
-                                + "   \"name\" : \"" + product_name +"HELLO"+ "\",\n"
+                                + "   \"name\" : \"" + product_name+ "\",\n"
                                 + "   \"time\" :  \"" + time + "\",\n"
                                 + "   \"size\" : \"" + size + "\",\n"
                                 + "   \"years\" : \"" + years + "\",\n"
@@ -99,7 +99,7 @@ public class get_products extends HttpServlet {
                                 + "   \"description\" : \"" + description + "\"\n"
                                 + "}");
                     }
-                    num += 1;
+                    II += 1;
                 }
                 connection.close();
 
