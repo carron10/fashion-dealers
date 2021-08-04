@@ -318,7 +318,7 @@
                             "                                            <br><b>Price:</b>" + price + "\n" +
                             "                                            <br><b>Item-description:</b> " + description + "..\n" +
                             "                                            <br>\n" +
-                            "                                            <a href=\"product.jsp?id=" + product_id + "\">View item</a>\n" +
+                            "                                            <a href=\"product.jsp?product=" + product_id + "\">View item</a>\n" +
                             "                                        </i>\n" +
                             "                                    </div>\n" +
                             "                                </div>\n" +
@@ -337,7 +337,7 @@
                             "                                            <br><b>Price:</b>" + price + "\n" +
                             "                                            <br><b>Item-description:</b> " + description + "..\n" +
                             "                                            <br>\n" +
-                            "                                            <a href=\"product.jsp?id=" + product_id + "\">View item</a>\n" +
+                            "                                            <a href=\"product.jsp?product=" + product_id + "\">View item</a>\n" +
                             "                                        </i>\n" +
                             "                                    </div>\n" +
                             "                                </div>\n" +
