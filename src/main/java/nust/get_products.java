@@ -71,8 +71,8 @@ public class get_products extends HttpServlet {
                     String picture = resultSet.getString("picture");
                     String cat = resultSet.getString("category");
                     String description = resultSet.getString("description");
-                    if (num == 0) {
-                        coments.put(product_id , ""
+                    if (num !=0) {
+                        coments.put(product_id , ","
                                 + "{\n"
                                 + "   \"name\" : \"" + product_name+ "\",\n"
                                 + "   \"time\" :  \"" + time + "\",\n"
@@ -86,7 +86,7 @@ public class get_products extends HttpServlet {
                                 + "}");
 
                     } else {
-                        coments.put(product_id,","
+                        coments.put(product_id,""
                                 + "{\n"
                                 + "   \"name\" : \"" + product_name + "\",\n"
                                 + "   \"time\" :  \"" + time + "\",\n"
@@ -99,7 +99,7 @@ public class get_products extends HttpServlet {
                                 + "   \"description\" : \"" + description + "\"\n"
                                 + "}");
                     }
-                  
+                  num++;
                 }
                 connection.close();
 
