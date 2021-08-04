@@ -23,6 +23,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.apache.commons.codec.digest.DigestUtils;
 
 /**
  *
@@ -49,6 +50,36 @@ public class get_products extends HttpServlet {
         ResultSet resultSet, st;
         String category = request.getParameter("category");
         String number = request.getParameter("number");
+        /*INSERT INTO  products(category,product_name,size,years,picture,price,description) values
+('kids','Jam suit','10','1-5yrs','kids/download (3).jpg','$19','null'),
+('kids','Winter  Trackpants','10','1-5yrs','kids/download.jpg','$19','null'),
+('kids','Boys Bottom','10','1-5yrs','kids/images (1).jpg','$19','null'),
+('kids','Girl Legins','10','1-5yrs','kids/images (2).jpg','$19','null'),
+('kids','Boys Grey Bottoms','10','1-5yrs','kids/images (3).jpg','$19','null'),
+('kids','Boys Grey Bottoms','10','5months-1yr','kids/images (4).jpg','$19','null'),
+('kids','Boys Bottoms','10','1-5yrs','kids/images (5).jpg','$19','null'),
+('kids','Boys Cargo Pants','10','1-5yrs','kids/images (6).jpg','$19','null'),
+('kids','Boys Shorts','10','1-5yrs','kids/images (7).jpg','$19','null'),
+('kids','Girls Sweat Pants','10','1-5yrs','kids/images (8).jpg','$19','null'),
+('kids','Kids Fleace Bottoms','10','1-5yrs','kids/images (9).jpg','$19','null'),
+('kids','Kids Shorts','10','1-5yrs','kids/images (10).jpg','$19','null'),
+('kids','Girls 3 Quarter Shorts','10','1-5yrs','kids/images (11).jpg','$19','null'),
+('kids','Girls Jeans','10','1-5yrs','kids/images (12).jpg','$19','null'),
+('kids','Girls Jeans','10','1-3yrs','kids/images (13).jpg','$19','null'),
+('kids','Girls Trousers','10','1-5yrs','kids/images (14).jpg','$19','null'),
+('kids','Orange kids Bottoms','10','1-5yrs','kids/images (15).jpg','$19','null'),
+('kids','Kids khakhi Trouser','10','1-5yrs','kids/images (16).jpg','$19','null'),
+('kids','','10','1-5yrs','kids/images (17).jpg','$19','null'),
+('kids','Jam suit','10','1-5yrs','kids/images (18).jpg','$19','null'),
+('kids','Jam suit','10','1-5yrs','kids/images (19).jpg','$19','null'),
+('kids','Jam suit','10','1-5yrs','kids/images (20).jpg','$19','null'),
+('kids','Jam suit','10','1-5yrs','kids/images (21).jpg','$19','null'),
+('kids','Jam suit','10','1-5yrs','kids/images (22).jpg','$19','null'),
+('kids','Null','10','1-5yrs','kids/images (23).jpg','$19','null'),
+('kids','Null','10','1-5yrs','kids/images (24).jpg','$19','null'),('kids','Null','10','1-5yrs','kids/images (25).jpg','$19','null'),('kids','Null','10','1-5yrs','kids/images (26).jpg','$19','null'),('kids','Null','10','1-5yrs','kids/images (27).jpg','$19','null'),
+
+;
+        */
         try {
             if (category != null) {
                 Map<String, String> coments = new LinkedHashMap();
@@ -72,6 +103,7 @@ public class get_products extends HttpServlet {
                     String picture = resultSet.getString("picture");
                     String cat = resultSet.getString("category");
                     String description = resultSet.getString("description");
+                    product_id =DigestUtils.md5Hex(product_id);
                     if (num !=0) {
                         coments.put(product_id , ","
                                 + "{\n"
