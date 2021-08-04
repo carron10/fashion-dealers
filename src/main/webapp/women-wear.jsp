@@ -19,8 +19,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <style>
-
-
             .navbar a{
                 color: #000;
             }
@@ -98,10 +96,7 @@
                 opacity: 1;
                 visibility: visible;
             }
-        </style>
-        <style>
-
-
+        
             .min, .max{
                 width: 30%;
                 display: inline-block;
@@ -115,13 +110,9 @@
                 text-decoration: underline red;
             }
 
-            /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-
-
             /* Set gray background color and 100% height */
             .sidenav {
                 padding-top: 20px;
-
                 height: 100%;
             }
             .content{
@@ -148,7 +139,6 @@
             }
             #button {
                 display: inline-block;
-                background-color: #FF9800;
                 width: 50px;
                 height: 50px;
                 text-align: center;
@@ -161,24 +151,16 @@
                 visibility: hidden;
                 z-index: 1000;
             }
-            #button::after {
-                content: "\f077";
-                font-family: FontAwesome;
-                font-weight: normal;
-                font-style: normal;
-                font-size: 2em;
-                line-height: 50px;
-                color: #fff;
-            }
+
 
 
             #button:hover {
                 cursor: pointer;
-                background-color: #333;
+                color: #cccc00;
             }
-            #button.show {
-                opacity: 1;
-                visibility: visible;
+
+            .items{
+                visibility: hidden;
             }
         </style>
 
@@ -189,7 +171,6 @@
                     $(this).html("Added to Cart");
                 });
             });
-
             document.onreadystatechange = function () {
                 if (document.readyState !== "complete") {
                     loader("start");
@@ -197,7 +178,6 @@
                     loader("stop");
                 }
             };
-
             function loader(nn) {
                 if (nn === "start") {
 
@@ -214,7 +194,7 @@
     </head>
 
     <body>
-        <a id="button" href="#body"></a>
+        <a id="button" href="#body"><i class="fa fa-chevron-up"></i></a>
         <div id="loader" class="center">
             <button class="btn btn-success" type="button" disabled>
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
@@ -228,8 +208,13 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="nav navbar-nav mr-auto">
+                <div class="navbar-header" style=" padding-top: 5px" href="/index.jsp">
+
+
+                </div>
+
+                <div class="collapse navbar-collapse float-right" id="collapsibleNavbar">
+                    <ul class="nav navbar-nav ml-auto">
 
                         <li class="nav-item active">
                             <a class="nav-link" href="index.jsp" >HOME</a>
@@ -264,749 +249,155 @@
                     </ul>
 
                 </div>
-                
+
             </nav>
-            
+
+
             <div class="container-fluid landlord-details" >  
-                <div class="row" style=" margin-top: 50px;">
-                    <div class="col-sm-2 sidenav">
-
-                    </div>
-                    <div class="col-sm-8 text-left content"> 
-
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-2">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 19-20yrs
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart<i class="fa"></i></a>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 16-20yrs
-                                            <br>Price: $20
-                                            <br>
-                                        </i>
-                                        <a class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 20-25
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 16-20yrs
-                                            <br>Price: $20
-                                            <br>
-                                        </i>
-                                        <a class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 20-25
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 16-20yrs
-                                            <br>Price: $20
-                                            <br>
-                                        </i>
-                                        <a class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 20-25
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 16-20yrs
-                                            <br>Price: $20
-                                            <br>
-                                        </i>
-                                        <a class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 20-25
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 16-20yrs
-                                            <br>Price: $20
-                                            <br>
-                                        </i>
-                                        <a class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 20-25
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 16-20yrs
-                                            <br>Price: $20
-                                            <br>
-                                        </i>
-                                        <a class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 20-25
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 16-20yrs
-                                            <br>Price: $20
-                                            <br>
-                                        </i>
-                                        <a class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 20-25
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 16-20yrs
-                                            <br>Price: $20
-                                            <br>
-                                        </i>
-                                        <a class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 20-25
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 16-20yrs
-                                            <br>Price: $20
-                                            <br>
-                                        </i>
-                                        <a class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 20-25
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 16-20yrs
-                                            <br>Price: $20
-                                            <br>
-                                        </i>
-                                        <a class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 20-25
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 16-20yrs
-                                            <br>Price: $20
-                                            <br>
-                                        </i>
-                                        <a class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 20-25
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 16-20yrs
-                                            <br>Price: $20
-                                            <br>
-                                        </i>
-                                        <a class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 20-25
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 16-20yrs
-                                            <br>Price: $20
-                                            <br>
-                                        </i>
-                                        <a class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 20-25
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 16-20yrs
-                                            <br>Price: $20
-                                            <br>
-                                        </i>
-                                        <a class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 20-25
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 16-20yrs
-                                            <br>Price: $20
-                                            <br>
-                                        </i>
-                                        <a class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 20-25
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 16-20yrs
-                                            <br>Price: $20
-                                            <br>
-                                        </i>
-                                        <a class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 20-25
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 16-20yrs
-                                            <br>Price: $20
-                                            <br>
-                                        </i>
-                                        <a class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 20-25
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 16-20yrs
-                                            <br>Price: $20
-                                            <br>
-                                        </i>
-                                        <a class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 20-25
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 16-20yrs
-                                            <br>Price: $20
-                                            <br>
-                                        </i>
-                                        <a class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 20-25
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 16-20yrs
-                                            <br>Price: $20
-                                            <br>
-                                        </i>
-                                        <a class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br>Available Sizes: 26-36
-                                            <br>Years: 20-25
-                                            <br>Price: $30
-                                            <br>
-                                        </i>
-                                        <a  class="r_more" >Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="#!">View item</a>
-                                        </i>
-                                         
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                         <div class="text-muted text-center bg-light " style="height: 40px;">
-                            <div style="top: 20%">  
-                                <div class="spinner-border spinner-border-sm mt-3" role="status">
-                                    <span class="sr-only">Loading...</span>
-                                </div>                            
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-sm-2 sidenav">
-
-                    </div>
-
+                <div  id="contents" style=" margin: 0">
 
                 </div>
-            </div>
-            <div id="layoutAuthentication_footer" >
-                <footer class="py-4 bg-light">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2021</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
+                <div class="text-muted text-center bg-light " style="height: 40px;">
+                    <div style="top: 20%">  
+                        <div class="spinner-border spinner-border-sm mt-3" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>                            
                     </div>
-                </footer>
+                </div>
             </div>
-            <script>
-                $(document).ready(function () {
-                    // Initialize Tooltip
-                    $('[data-toggle="tooltip"]').tooltip();
 
-                    // Add smooth scrolling to all links in navbar + footer link
-                    $("#button").on('click', function (event) {
 
-                        // Make sure this.hash has a value before overriding default behavior
-                        if (this.hash !== "") {
+            <div class="col-sm-2 sidenav">
 
-                            // Prevent default anchor click behavior
-                            event.preventDefault();
+            </div>
 
-                            // Store hash
-                            var hash = this.hash;
 
-                            // Using jQuery's animate() method to add smooth page scroll
-                            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-                            $('html, body').animate({
-                                scrollTop: $(hash).offset().top
-                            }, 1000, function () {
+        </div>
+    </div>
+    <div id="layoutAuthentication_footer" >
+        <footer class="py-4 bg-light">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between small">
+                    <div class="text-muted">Copyright &copy; Your Website 2021</div>
+                    <div>
+                        <a href="#">Privacy Policy</a>
+                        &middot;
+                        <a href="#">Terms &amp; Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        function load_data(data) {
+            const x = JSON.parse(data);
 
-                                // Add hash (#) to URL when done scrolling (default click behavior)
-                                window.location.hash = hash;
-                            });
-                        } // End if
+            var content = "";
+
+            for (var i = 0; i < x.products.length; i++) {
+                var size = x.products[i].size;
+                var price = x.products[i].price;
+                var years = x.products[i].years;
+                var name = x.products[i].name;
+                var time = x.products[i].time;
+                var cateory = x.products[i].category;
+                var picture = x.products[i].picture;
+                var product_id = x.products[i].p_id;
+                var description = x.products[i].description;
+                var data = "";
+                if ((i + 1) % 2 === 0) {
+
+                    data += "<div class=\"col-md\">\n" +
+                            "                                <div class=\"media p-3\">\n" +
+                            "                                    <img src=\"image/" + picture + "\" alt=\"" + name + "\" class=\" align-self-start mr-3 mt-3\" style=\"width:150px; height:150px;\">\n" +
+                            "                                    <div class=\"media-body\">\n" +
+                            "                                        <i>\n" +
+                            "                                            <strong>" + name + "</strong>\n" +
+                            "                                            <br><b>Available Sizes:</b>" + size + "\n" +
+                            "                                            <br><b>Years:</b>" + years + "\n" +
+                            "                                            <br><b>Price:</b>" + price + "\n" +
+                            "                                            <br><b>Item-description:</b> " + description + "..\n" +
+                            "                                            <br>\n" +
+                            "                                            <a href=\"product.jsp?\"" + product_id + ">View item</a>\n" +
+                            "                                        </i>\n" +
+                            "                                    </div>\n" +
+                            "                                </div>\n" +
+                            "                            </div>\n" +
+                            "                        </div>";
+                } else {
+                    data += "<div class=\"row\">\n" +
+                            "                            <div class=\"col-md\">\n" +
+                            "                                <div class=\"media p-3\">\n" +
+                            "                                    <img src=\"image/" + picture + "\" alt=\"" + name + "\" class=\" align-self-start mr-3 mt-3\" style=\"width:150px; height:150px;\">\n" +
+                            "                                    <div class=\"media-body\">\n" +
+                            "                                        <i>\n" +
+                            "                                            <strong>" + name + "</strong>\n" +
+                            "                                            <br><b>Available Sizes:</b>" + size + "\n" +
+                            "                                            <br><b>Years:</b>" + years + "\n" +
+                            "                                            <br><b>Price:</b>" + price + "\n" +
+                            "                                            <br><b>Item-description:</b> " + description + "..\n" +
+                            "                                            <br>\n" +
+                            "                                            <a href=\"product.jsp?\"" + product_id + ">View item</a>\n" +
+                            "                                        </i>\n" +
+                            "                                    </div>\n" +
+                            "                                </div>\n" +
+                            "                            </div>\n";
+                }
+                content += data;
+            }
+            if (content !== "") {
+
+                $("#contents").html(content);
+
+            }
+        }
+        $(document).ready(function () {
+            loader("start");
+            var request = $.ajax({
+                url: "/get_products",
+                method: "POST",
+                data: {category: "women", number: "20"},
+                dataType: "html"
+            });
+            request.done(function (msg) {
+                load_data(msg);
+            });
+            // Initialize Tooltip
+            $('[data-toggle="tooltip"]').tooltip();
+            // Add smooth scrolling to all links in navbar + footer link
+            $("#button").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+                    // Store hash
+                    var hash = this.hash;
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 1000, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
                     });
-                });
-                var btn = $('#button');
+                } // End if
+            });
+        });
 
-                $(window).scroll(function () {
-                    if ($(window).scrollTop() > 300) {
-                        btn.addClass('show');
-                      
-                    } else {
-                        btn.removeClass('show');
-                        
-                    }
-                });
-            </script>
-    </body>
+        var btn = $('#button');
+        $(window).scroll(function () {
+            hh();
+        });
+        function hh() {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        }
+    </script>
+</body>
 </html>

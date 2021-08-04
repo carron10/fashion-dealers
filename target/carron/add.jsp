@@ -128,7 +128,7 @@
 
             var disc = document.getElementById("disc").value;
             var picture = document.getElementById("picture").value;
-            var data = "name=" + name + "&size=" + size + "&category=" + category + "&picture=" + picture + "&years=" + years + "&price=" + price + "&disc=" + disc;
+            var data = "name=" + name + "&size=" + size + "&category=" + category + "&picture=" + picture + "&years=" + years + "&price=" + price + "&description=" + disc;
             xhttp.onreadystatechange = function () {
                 if (this.readyState === 4 && this.status === 200) {
                     document.getElementById("error").innerHTML = xhttp.responseText;
