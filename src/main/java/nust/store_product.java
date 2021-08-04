@@ -50,7 +50,7 @@ public class store_product extends HttpServlet {
         // String page = request.getRequestURI();
         Connection con;
         PreparedStatement pstat;
-        
+        /*INSERT INTO  products(category,product_name,size,years,picture,price,description) values('kids','Black shoe','13','1-5yrs','kids/boys-shoes/images (28).jpg','$199',' boys black shoes');*/
         
         String data="";
         if (category == null || size == null || name == null) {

@@ -86,7 +86,7 @@ public class get_products extends HttpServlet {
                                 + "}");
 
                     } else {
-                        coments.put(product_id + "," + size, ","
+                        coments.put(product_id + "," + size, ""
                                 + "{\n"
                                 + "   \"name\" : \"" + product_name + "\",\n"
                                 + "   \"time\" :  \"" + time + "\",\n"
