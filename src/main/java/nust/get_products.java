@@ -15,6 +15,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.LinkedHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -50,7 +51,7 @@ public class get_products extends HttpServlet {
         String number = request.getParameter("number");
         try {
             if (category != null) {
-                Map<String, String> coments = new TreeMap();
+                Map<String, String> coments = new LinkedHashMap();
 
                 connection = getConnection();
                 statement = connection.createStatement();
