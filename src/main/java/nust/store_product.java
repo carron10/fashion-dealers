@@ -50,6 +50,9 @@ public class store_product extends HttpServlet {
         // String page = request.getRequestURI();
         Connection con;
         PreparedStatement pstat;
+        
+        
+        String data="";
         if (category == null || size == null || name == null) {
             response.sendRedirect("index.jsp");
         } else {
