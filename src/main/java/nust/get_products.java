@@ -74,7 +74,7 @@ public class get_products extends HttpServlet {
                     if (num == 0) {
                         coments.put(product_id , ""
                                 + "{\n"
-                                + "   \"name\" : \"" + product_name +num+ "\",\n"
+                                + "   \"name\" : \"" + product_name +"HELLO"+ "\",\n"
                                 + "   \"time\" :  \"" + time + "\",\n"
                                 + "   \"size\" : \"" + size + "\",\n"
                                 + "   \"years\" : \"" + years + "\",\n"
