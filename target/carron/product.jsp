@@ -1,3 +1,4 @@
+
 <%-- 
     Document   : women-wear
     Created on : Jul 29, 2021, 12:36:37 PM
@@ -96,9 +97,6 @@
                 opacity: 1;
                 visibility: visible;
             }
-        </style>
-        <style>
-
 
             .min, .max{
                 width: 30%;
@@ -113,13 +111,9 @@
                 text-decoration: underline red;
             }
 
-            /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-
-
             /* Set gray background color and 100% height */
             .sidenav {
                 padding-top: 20px;
-
                 height: 100%;
             }
             .content{
@@ -127,7 +121,6 @@
             }
             .landlord-details .media{
                 border-bottom: 1px solid #d6d6d6;
-
             }
             .items{
                 height: 50px;
@@ -147,7 +140,6 @@
             }
             #button {
                 display: inline-block;
-
                 width: 50px;
                 height: 50px;
                 text-align: center;
@@ -171,15 +163,15 @@
             .items{
                 visibility: hidden;
             }
-            .picture{
-
-                margin: 20px;
-
-            }
         </style>
 
         <script>
 
+            $(document).ready(function () {
+                $(".r_more").click(function () {
+                    $(this).html("Added to Cart");
+                });
+            });
             document.onreadystatechange = function () {
                 if (document.readyState !== "complete") {
                     loader("start");
@@ -212,28 +204,18 @@
         </div>
         <div class="body" id="body">
             <!--Start of Navigation bar -->
-            <nav class="navbar navbar-expand-md navbar-light sticky-top navx" style=" background-color: #cccccc">
+            <nav class="navbar navbar-expand-md navbar-light sticky-top" style=" background-color: #cccccc">
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <form class="form-inline">
-                    <div class="input-group">
-                        <div class="input-group-append" style=" width: 90px;">
-                            <select data-trigger="" class="form-control" name="location">
-                                <option>ALL</option>
-                                <option>Women Wear</option>
-                                <option>Men Wear</option>
-                                <option>Children Wear</option>
-                            </select>
-                        </div>
+                <div class="navbar-header" style=" padding-top: 5px" href="/index.jsp">
 
-                        <input type="text" class="form-control" placeholder="search" aria-label="search" aria-describedby="category">
 
-                    </div>
-                </form>
+                </div>
+
                 <div class="collapse navbar-collapse float-right" id="collapsibleNavbar">
-                    <ul class="nav navbar-nav mr-auto">
+                    <ul class="nav navbar-nav ml-auto">
 
                         <li class="nav-item active">
                             <a class="nav-link" href="index.jsp" >HOME</a>
@@ -243,6 +225,7 @@
                                 CATEGORY
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item nav-link" href="products.jsp" >All</a>
                                 <a class="dropdown-item nav-link" href="women-wear.jsp" >Women Wear</a>
                                 <a class="dropdown-item nav-link"  href="men-wear.jsp" >Men Wear</a>
                                 <a class="dropdown-item nav-link" href="kids-wear.jsp" >Children Wear</a>
@@ -271,1910 +254,181 @@
 
             </nav>
 
-            <div class="collapse position-fixed  container-fluid" id="sign">
-                <form class="float-right">
-                    <p class=" text-center"><strong>Sign In</strong></p>
-                    <input type="text" class=" form-control form-control-sm" placeholder="username">
-                    <input type="text" class=" form-control form-control-sm" placeholder="password">
-                </form>
-            </div>
+
             <div class="container-fluid landlord-details" >  
-                <div class="row">
-                    <div class="col-sm-2 sidenav">
-
-                    </div>
-                    <div class="col-sm-8 text-left content"> 
-
-                        <div class=" card">
-                            <div class=" card-body">
-                                <img src="image/IMG-20210726-WA0163.jpg" width="100%" height="60%" alt="login_background"/>
-                            </div>
-                            <div class="card-footer">
-                                <p><strong>Product:</strong><span>Leather sneakers</span><br>
-                                    <strong>Price: </strong><span> $30</span><br>
-                                    <strong>Available Color: </strong><span>Black,white and blue</span></p>
-                            </div>
-                        </div>
-                        <div class=" text-center mt-3">
-                            <h4>More Similar Product</h4>
-                            <hr class="raised l-2">
-
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="media p-3">
-                                    <img src="image/IMG-20210726-WA0163.jpg" alt="John Doe" class=" align-self-start mr-3 mt-3" style="width:150px;">
-                                    <div class="media-body">
-                                        <i>
-                                            <strong>Product Name</strong>
-                                            <br><b>Available Sizes:</b> 26-36
-                                            <br><b>Years:</b> 16-20yrs
-                                            <br><b>Price:</b> $20
-                                            <br><b>Item-description:</b> This is a trending man T-shirt which designed using ....
-                                            <br>
-                                            <a href="product.jsp">View item</a>
-                                        </i>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="text-muted text-center bg-light " style="height: 40px;">
-                            <div style="top: 20%">  
-                                <div class="spinner-border spinner-border-sm mt-3" role="status">
-                                    <span class="sr-only">Loading...</span>
-                                </div>                            
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-sm-2 sidenav">
-
-                    </div>
-
+                <div  id="contents" style=" margin: 0">
 
                 </div>
-            </div>
-            <div id="layoutAuthentication_footer" >
-                <footer class="py-4 bg-light">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2021</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
+                <div class="text-muted text-center bg-light " style="height: 40px;">
+                    <div style="top: 20%">  
+                        <div class="spinner-border spinner-border-sm mt-3" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>                            
                     </div>
-                </footer>
+                </div>
             </div>
-            <script>
-                $(document).ready(function () {
-                    // Initialize Tooltip
-                    $('[data-toggle="tooltip"]').tooltip();
-                    // Add smooth scrolling to all links in navbar + footer link
-                    $("#button").on('click', function (event) {
 
-                        // Make sure this.hash has a value before overriding default behavior
-                        if (this.hash !== "") {
 
-                            // Prevent default anchor click behavior
-                            event.preventDefault();
-                            // Store hash
-                            var hash = this.hash;
-                            // Using jQuery's animate() method to add smooth page scroll
-                            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-                            $('html, body').animate({
-                                scrollTop: $(hash).offset().top
-                            }, 1000, function () {
+            <div class="col-sm-2 sidenav">
 
-                                // Add hash (#) to URL when done scrolling (default click behavior)
-                                window.location.hash = hash;
-                            });
-                        } // End if
-                    });
-                });
+            </div>
 
-                var btn = $('#button');
-                $(window).scroll(function () {
-                    hh();
-                });
-                function hh() {
-                    if ($(window).scrollTop() > 300) {
-                        btn.addClass('show');
 
-                        $(".navx").css("visibility", "hidden");
-                    } else {
-                        btn.removeClass('show');
+        </div>
+    </div>
+    <div id="layoutAuthentication_footer" >
+        <footer class="py-4 bg-light">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between small">
+                    <div class="text-muted">Copyright &copy; Your Website 2021</div>
+                    <div>
+                        <a href="#">Privacy Policy</a>
+                        &middot;
+                        <a href="#">Terms &amp; Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        function load_data(data) {
+            const x = JSON.parse(data);
 
-                        $(".navx").css("visibility", "visible");
-                    }
+            var content = "";
+           
+            for (var i = 0; i < x.product.length; i++) {
+                var size = x.product[i].size;
+                var price = x.product[i].price;
+                var years = x.product[i].years;
+                var name = x.product[i].name;
+                var time = x.product[i].time;
+                var cateory = x.product[i].category;
+                var picture = x.product[i].picture;
+                var product_id = x.product[i].p_id;
+                var description = x.product[i].description;
+                content = "<div class=\" card\">\n" +
+                        "                            <div class=\" card-body\">\n" +
+                      
+                        "                                <img src=\"image/" + picture +"\" width=\"100%\" height=\"60%\" alt=\"login_background\"/>\n" +
+                        "                            </div>\n" +
+                        "                            <div class=\"card-footer\">\n" +
+                        "                                <p><strong>Product:</strong><span>"+name+"</span><br>\n" +
+                        "                                    <strong>Price: </strong><span>"+price+"</span><br>\n" +
+                        "                                    <strong>Available Color: </strong><span>Black,white and blue</span></p>\n" +
+                        "                            </div>\n" +
+                        "                        </div>\n" +
+                        "                        <div class=\" text-center mt-3\">\n" +
+                        "                            <h4>More Similar Product</h4>\n" +
+                        "                            <hr class=\"raised l-2\">\n" +
+                        "\n" +
+                        "                        </div>";
+            }
+            
+            
+            for (var i = 0; i < x.products.length; i++) {
+                var size = x.products[i].size;
+                var price = x.products[i].price;
+                var years = x.products[i].years;
+                var name = x.products[i].name;
+                var time = x.products[i].time;
+                var cateory = x.products[i].category;
+                var picture = x.products[i].picture;
+                var product_id = x.products[i].p_id;
+                var description = x.products[i].description;
+                var data = "";
+                if ((i + 1) % 2 === 0) {
+
+                    data += "<div class=\"col-md\">\n" +
+                            "                                <div class=\"media p-3\">\n" +
+                            "                                    <img src=\"image/" + picture + "\" alt=\"" + name + "\" class=\" align-self-start mr-3 mt-3\" style=\"width:150px; height:150px;\">\n" +
+                            "                                    <div class=\"media-body\">\n" +
+                            "                                        <i>\n" +
+                            "                                            <strong>" + name + "</strong>\n" +
+                            "                                            <br><b>Available Sizes:</b>" + size + "\n" +
+                            "                                            <br><b>Years:</b>" + years + "\n" +
+                            "                                            <br><b>Price:</b>" + price + "\n" +
+                            "                                            <br><b>Item-description:</b> " + description + "..\n" +
+                            "                                            <br>\n" +
+                            "                                            <a href=\"product.jsp?product=" + product_id + "\">View item</a>\n" +
+                            "                                        </i>\n" +
+                            "                                    </div>\n" +
+                            "                                </div>\n" +
+                            "                            </div>\n" +
+                            "                        </div>";
+                } else {
+                    data += "<div class=\"row\">\n" +
+                            "                            <div class=\"col-md\">\n" +
+                            "                                <div class=\"media p-3\">\n" +
+                            "                                    <img src=\"image/" + picture + "\" alt=\"" + name + "\" class=\" align-self-start mr-3 mt-3\" style=\"width:150px; height:150px;\">\n" +
+                            "                                    <div class=\"media-body\">\n" +
+                            "                                        <i>\n" +
+                            "                                            <strong>" + name + "</strong>\n" +
+                            "                                            <br><b>Available Sizes:</b>" + size + "\n" +
+                            "                                            <br><b>Years:</b>" + years + "\n" +
+                            "                                            <br><b>Price:</b>" + price + "\n" +
+                            "                                            <br><b>Item-description:</b> " + description + "..\n" +
+                            "                                            <br>\n" +
+                            "                                            <a href=\"product.jsp?product=" + product_id + "\">View item</a>\n" +
+                            "                                        </i>\n" +
+                            "                                    </div>\n" +
+                            "                                </div>\n" +
+                            "                            </div>\n";
                 }
-            </script>
-    </body>
+                content += data;
+            }
+            if (content !== "") {
+
+                $("#contents").html(content);
+
+            }
+        }
+        $(document).ready(function () {
+            loader("start");
+            var request = $.ajax({
+                url: "/get_product",
+                method: "POST",
+                data: {category: "kids", number: "20"},
+                dataType: "html"
+            });
+            request.done(function (msg) {
+                load_data(msg);
+            });
+            // Initialize Tooltip
+            $('[data-toggle="tooltip"]').tooltip();
+            // Add smooth scrolling to all links in navbar + footer link
+            $("#button").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+                    // Store hash
+                    var hash = this.hash;
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 1000, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+
+        var btn = $('#button');
+        $(window).scroll(function () {
+            hh();
+        });
+        function hh() {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        }
+    </script>
+</body>
 </html>

@@ -28,8 +28,8 @@ import org.apache.commons.codec.digest.DigestUtils;
  *
  * @author Muleya
  */
-@WebServlet(name = "get_products", urlPatterns = {"/get_products"})
-public class get_products extends HttpServlet {
+@WebServlet(name = "get_product", urlPatterns = {"/get_product"})
+public class get_product extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -47,8 +47,7 @@ public class get_products extends HttpServlet {
         Connection connection;
         Statement statement, stat;
         ResultSet resultSet, st;
-        String category = request.getParameter("category");
-        String number = request.getParameter("number");
+        String id = request.getParameter("product");
         /*INSERT INTO  products(category,product_name,size,years,picture,price,description) values
 ('kids','Jam suit','10','1-5yrs','kids/download (3).jpg','$19','null'),
 ('kids','Winter  Trackpants','10','1-5yrs','kids/download.jpg','$19','null'),
@@ -78,20 +77,45 @@ public class get_products extends HttpServlet {
 ('kids','Null','10','1-5yrs','kids/images (24).jpg','$19','null'),('kids','Null','10','1-5yrs','kids/images (25).jpg','$19','null'),('kids','Null','10','1-5yrs','kids/images (26).jpg','$19','null'),('kids','Null','10','1-5yrs','kids/images (27).jpg','$19','null'),
 
 ;
-        */
+         */
         try {
-            if (category != null) {
+            if (id != null) {
                 Map<String, String> coments = new LinkedHashMap();
 
                 connection = getConnection();
                 statement = connection.createStatement();
-                String sql = "select * from products where category='" + category + "'";
-                if ("null".equals(category)) {
-                    sql = "select * from products;";
+                String sql = "select * from products where product_id='" + id + "'";
+                String product = "", category = null;
+
+                resultSet = statement.executeQuery(sql);
+                while (resultSet.next()) {
+                    String time = resultSet.getString("created_on");
+                    String product_name = resultSet.getString("product_name");
+                    String price = resultSet.getString("price");
+                    String size = resultSet.getString("size");
+                    String years = resultSet.getString("years");
+                    String product_id = resultSet.getString("product_id");
+                    String picture = resultSet.getString("picture");
+                    category = resultSet.getString("category");
+                    String description = resultSet.getString("description");
+                    product += "product:[{\n"
+                            + "   \"name\" : \"" + product_name + "\",\n"
+                            + "   \"time\" :  \"" + time + "\",\n"
+                            + "   \"size\" : \"" + size + "\",\n"
+                            + "   \"years\" : \"" + years + "\",\n"
+                            + "\"price\" : \"" + price + "\",\n"
+                            + "\"p_id\" : \"" + product_id + "\",\n"
+                            + "   \"picture\" : \"" + picture + "\",\n"
+                            + "   \"category\" : \"" + category + "\",\n"
+                            + "   \"description\" : \"" + description + "\"\n"
+                            + "}]";
                 }
+                resultSet.close();
+                sql = "select * from products where category='" + category + "'";
                 resultSet = statement.executeQuery(sql);
                 String products = null;
                 int num = 0;
+
                 while (resultSet.next()) {
                     String time = resultSet.getString("created_on");
                     String product_name = resultSet.getString("product_name");
@@ -102,11 +126,11 @@ public class get_products extends HttpServlet {
                     String picture = resultSet.getString("picture");
                     String cat = resultSet.getString("category");
                     String description = resultSet.getString("description");
-                    
-                    if (num !=0) {
-                        coments.put(product_id , ","
+                   
+                    if (num != 0) {
+                        coments.put(product_id, ","
                                 + "{\n"
-                                + "   \"name\" : \"" + product_name+ "\",\n"
+                                + "   \"name\" : \"" + product_name + "\",\n"
                                 + "   \"time\" :  \"" + time + "\",\n"
                                 + "   \"size\" : \"" + size + "\",\n"
                                 + "   \"years\" : \"" + years + "\",\n"
@@ -118,9 +142,9 @@ public class get_products extends HttpServlet {
                                 + "}");
 
                     } else {
-                        coments.put(product_id,""
+                        coments.put(product_id, ""
                                 + "{\n"
-                                + "   \"name\" : \"" + product_name+ "\",\n"
+                                + "   \"name\" : \"" + product_name + "\",\n"
                                 + "   \"time\" :  \"" + time + "\",\n"
                                 + "   \"size\" : \"" + size + "\",\n"
                                 + "   \"years\" : \"" + years + "\",\n"
@@ -131,7 +155,7 @@ public class get_products extends HttpServlet {
                                 + "   \"description\" : \"" + description + "\"\n"
                                 + "}");
                     }
-                  num++;
+                    num++;
                 }
                 connection.close();
 
@@ -140,8 +164,10 @@ public class get_products extends HttpServlet {
                     for (String key : coments.values()) {
                         info += key;
                     }
+                    
                     products = "{\"products\":"
-                            + "[" + info + "]"
+                            + "[" + info + "],"
+                            + product
                             + "}";
                 }
                 out.println(products);
@@ -149,10 +175,10 @@ public class get_products extends HttpServlet {
             } else {
                 response.sendRedirect("index.jsp");
             }
-        } catch (URISyntaxException ex) {
-            Logger.getLogger(get_comments.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(get_comments.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(get_product.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(get_product.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             out.close();
         }
