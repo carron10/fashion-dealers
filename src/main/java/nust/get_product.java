@@ -98,7 +98,7 @@ public class get_product extends HttpServlet {
                     String picture = resultSet.getString("picture");
                     category = resultSet.getString("category");
                     String description = resultSet.getString("description");
-                    product += "product:[{\n"
+                    product += "\"product\":[{\n"
                             + "   \"name\" : \"" + product_name + "\",\n"
                             + "   \"time\" :  \"" + time + "\",\n"
                             + "   \"size\" : \"" + size + "\",\n"
