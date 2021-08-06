@@ -110,7 +110,7 @@ public class get_product extends HttpServlet {
                             + "   \"description\" : \"" + description + "\"\n"
                             + "}]";
                 }
-                resultSet.close();
+               
                 sql = "select * from products where category='" + category + "'";
                 resultSet = statement.executeQuery(sql);
                 String products = null;

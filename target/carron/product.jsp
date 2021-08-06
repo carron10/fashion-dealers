@@ -295,7 +295,7 @@
             const x = JSON.parse(data);
 
             var content = "";
-           
+
             for (var i = 0; i < x.product.length; i++) {
                 var size = x.product[i].size;
                 var price = x.product[i].price;
@@ -308,12 +308,11 @@
                 var description = x.product[i].description;
                 content = "<div class=\" card\">\n" +
                         "                            <div class=\" card-body\">\n" +
-                      
-                        "                                <img src=\"image/" + picture +"\" width=\"100%\" height=\"60%\" alt=\"login_background\"/>\n" +
+                        "                                <img src=\"image/" + picture + "\" width=\"100%\" height=\"60%\" alt=\"login_background\"/>\n" +
                         "                            </div>\n" +
                         "                            <div class=\"card-footer\">\n" +
-                        "                                <p><strong>Product:</strong><span>"+name+"</span><br>\n" +
-                        "                                    <strong>Price: </strong><span>"+price+"</span><br>\n" +
+                        "                                <p><strong>Product:</strong><span>" + name + "</span><br>\n" +
+                        "                                    <strong>Price: </strong><span>" + price + "</span><br>\n" +
                         "                                    <strong>Available Color: </strong><span>Black,white and blue</span></p>\n" +
                         "                            </div>\n" +
                         "                        </div>\n" +
@@ -323,8 +322,8 @@
                         "\n" +
                         "                        </div>";
             }
-            
-            
+
+
             for (var i = 0; i < x.products.length; i++) {
                 var size = x.products[i].size;
                 var price = x.products[i].price;
@@ -384,10 +383,14 @@
         }
         $(document).ready(function () {
             loader("start");
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const code = urlParams.get('product');
+
             var request = $.ajax({
                 url: "/get_product",
                 method: "POST",
-                data: {category: "kids", number: "20"},
+                data: {id: "20"},
                 dataType: "html"
             });
             request.done(function (msg) {
