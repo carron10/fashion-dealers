@@ -5,9 +5,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="navbar-header" style=" padding-top: 5px" href="/index.jsp">
-
-
-        <a class="nav-link fa fa-shopping-cart" href="services.jsp" ></a>
+        <a class="nav-link fa fa-shopping-cart" href="services.jsp" ><i class="badge">0</i></a>
     </div>
 
     <div class="collapse navbar-collapse float-right" id="collapsibleNavbar">
