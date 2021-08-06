@@ -7,10 +7,9 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <% String n = request.getParameter("content");%>
-    <% if (n == null) { %>
-    <jsp:include page="header.jsp?active=index"></jsp:include>
-    <%}%>
+  
+    <jsp:include page="header.jsp"></jsp:include>
+ 
     <!--End of Navigation bar -->
     <!-- Start of the body -->
     <div id="body">
@@ -140,9 +139,8 @@
             </div>
         </div>
     </div>
-    <!--The end of the body-->
-    <% if (n == null) { %>
+   
     <jsp:include page="footer.jsp"></jsp:include>
-    <% }%>
+    
 </body>
 </html>
