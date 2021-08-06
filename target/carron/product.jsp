@@ -385,12 +385,12 @@
             loader("start");
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
-            const code = urlParams.get('product');
+            const product= urlParams.get('product');
 
             var request = $.ajax({
                 url: "/get_product",
                 method: "POST",
-                data: {id: "20"},
+                data: {product:product},
                 dataType: "html"
             });
             request.done(function (msg) {
