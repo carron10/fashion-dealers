@@ -1,5 +1,6 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="U_AA9uVhETv3td8BslU7SMA-XOXdqo9zdrnkWnV72yY" />
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="U_AA9uVhETv3td8BslU7SMA-XOXdqo9zdrnkWnV72yY">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -149,152 +150,109 @@
         .items{
             visibility: hidden;
         }
-
-
-        .navigation {
-            width: 100%;
-            height: 50px;
-
-            display: flex;
-            align-items: center;
-            border-top: 6px solid #d60e96;
-        }
-
-        .logo {
-            max-height: 70px;
-        }
-
-        li {
-            list-style: none;
-        }
-
-        .fa,
-        .fas {
-            font-family: 'FontAwesome';
-        }
-
-        ul li a {
-            font-size: 1.1rem;
-            color: #343a40;
-        }
-
-        ul li a.cart:hover {
-            text-decoration: none;
-            color: #d60e96;
-        }
-
-        .header ul li a.cart .cart-basket {
+        .cart-basket {
             font-size: .6rem;
             position: absolute;
-            top: -6px;
-            right: -5px;
+
             width: 15px;
             height: 15px;
-            color: #fff;
-            background-color: #418deb;
-            border-radius: 50%;
+            color:  #ff0000;
+           
+            border-radius: 50% ;
+        }
+        .fa-shopping-cart{
+            border: 1px red solid;
+            padding-right: 30px;
+            padding-left: 30px;
+            
         }
     </style>
 
     <script>
 
-    $(document).ready(function () {
-        $(".r_more").click(function () {
-            $(this).html("Added to Cart");
+        $(document).ready(function () {
+            $(".r_more").click(function () {
+                $(this).html("Added to Cart");
+            });
         });
-    });
-    document.onreadystatechange = function () {
-        if (document.readyState !== "complete") {
-            loader("start");
-        } else {
-            loader("stop");
-        }
-    };
-    function loader(nn) {
-        if (nn === "start") {
+        document.onreadystatechange = function () {
+            if (document.readyState !== "complete") {
+                loader("start");
+            } else {
+                loader("stop");
+            }
+        };
+        function loader(nn) {
+            if (nn === "start") {
 
-            $("#loader").show();
-            $(".loader").show();
-        } else {
-            $("#loader").hide();
-            $(".loader").hide();
-            //  $(".body").show();
+                $("#loader").show();
+                $(".loader").show();
+            } else {
+                $("#loader").hide();
+                $(".loader").hide();
+                //  $(".body").show();
+            }
         }
-    }
     </script>
 
 </head>
 
 <body>
     <a id="button" href="#body"><i class="fa fa-chevron-up"></i></a>
-    <div id="loader" class="center">
-        <button class="btn btn-success" type="button" disabled>
+    <div id="loader" class="center" style="display: none;">
+        <button class="btn btn-success" type="button" disabled="">
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             Loading...
         </button>
     </div>
 
     <!--Start of Navigation bar -->
-    <div class="header navigation  sticky-top">
-        <div class="col-xl-3 col-lg-2 col-sm-4 col-5">
-            <a href="/">
-                <img alt="Logo" class="img-fluid py-3 logo" src="https://raw.githubusercontent.com/solodev/shopping-cart-items-number/master/images/lunar-xp-logo.png" aria-role="logo">
-            </a>
+    <!--Start of Navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-light sticky-top" style=" background-color: #cccccc">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-header" style=" padding-top: 5px" href="/index.jsp">
+            <a class="nav-link fa fa-shopping-cart fa-lg" href="services.jsp"><span class="cart-basket text-center">0</span></a>
         </div>
-        <div class="col-xl-9 col-lg-10 col-sm-8 col-7">
 
-            <ul class="navbar-nav flex-row justify-content-end flex-wrap align-items-center mr-lg-4 mr-xl-0">
+        <div class="collapse navbar-collapse float-right" id="collapsibleNavbar">
+            <ul class="nav navbar-nav ml-auto">
 
-                <li class="nav-item px-3 text-uppercase mb-0 position-relative d-lg-flex">
-                    <a class="d-block w-100 h-100 text-black py-4 position-relative top-link" href="/index.jsp"><strong>Home</strong></a>
-
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.jsp">HOME</a>
                 </li>
-                <li class="nav-item px-3 text-uppercase mb-0 position-relative d-lg-flex">
-                    <a class="dropdown-toggle d-block w-100 h-100 text-black py-4 position-relative top-link" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                       <strong>Category</strong>
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle nav-link" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        CATEGORY
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item nav-link" href="products.jsp" >All</a>
-                        <a class="dropdown-item nav-link" href="women-wear.jsp" >Women Wear</a>
-                        <a class="dropdown-item nav-link"  href="men-wear.jsp" >Men Wear</a>
-                        <a class="dropdown-item nav-link" href="kids-wear.jsp" >Children Wear</a>
+                        <a class="dropdown-item nav-link" href="products.jsp">All</a>
+                        <a class="dropdown-item nav-link" href="women-wear.jsp">Women Wear</a>
+                        <a class="dropdown-item nav-link" href="men-wear.jsp">Men Wear</a>
+                        <a class="dropdown-item nav-link" href="kids-wear.jsp">Children Wear</a>
                     </div>
                 </li>
-                <li class="nav-item px-3 text-uppercase mb-0 position-relative d-lg-flex">
-                    <a class="d-block w-100 h-100 text-black py-4 position-relative top-link" href="/services.jsp"><strong>CONTACT</strong></a>
+                <li class="nav-item ">
+                    <a class="nav-link " href="services.jsp">SERVICES</a>
                 </li>
-                <li class="nav-item px-3 text-uppercase mb-0 position-relative d-lg-flex">
-                    <a class="d-block w-100 h-100 text-black py-4 position-relative top-link" href="/services.jsp"><strong>SERVICES</strong></a>
+
+                <li class="nav-item ">
+                    <a class="nav-link" href="contact.jsp">CONTACT</a>
                 </li>
-                <li class="nav-item px-3 text-uppercase mb-0 position-relative d-lg-flex">
-                  
-                     <a class="dropdown-toggle d-block w-100 h-100 text-black py-4 position-relative top-link" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                       <strong>More</strong>
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle nav-link" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        MORE
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class=" dropdown-item nav-link" href="about.jsp" >About</a>
-                        <a class="dropdown-item nav-link"  href="terms-and-conditions.jsp" >Terms and Conditions</a>
+                        <a class=" dropdown-item nav-link" href="about.jsp">About</a>
+                        <a class="dropdown-item nav-link" href="terms-and-conditions.jsp">Terms and Conditions</a>
                     </div>
                 </li>
-                <li class="nav-item px-3 text-uppercase mb-0 position-relative d-lg-flex">
-                    <div id="cart" class="d-none">
 
-                    </div>
-                    <a href="/store/cart.stml" class="cart position-relative d-inline-flex" aria-label="View your shopping cart">
-                        <i class="fas fa fa-shopping-cart fa-lg"></i>
-                        <span class="cart-basket d-flex align-items-center justify-content-center">
-                            0
-                        </span>
-                    </a>
-                </li>
-                <button id="sidenav-open-btn" class="menu-hamburger position-absolute pointer p-0">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
             </ul>
+
         </div>
-    </div>
 
-
-
+    </nav>
