@@ -79,9 +79,9 @@
                         "                                <p><strong>Product:</strong><span>" + name + "</span><br>\n" +
                         "                                    <strong>Price: </strong><span>" + price + "</span><br>\n" +
                         "                                    <strong>Available Color: </strong><span>Black,white and blue</span></p>\n" +
-                        "<button class=\"btn <%if(value.equals("false")){%>btn-primary<%}else{%>btn-danger<%}%> btn-sm \" id=\"add-to-cart\" onclick=addCart('" + product_id + "')><i class=\"fa fa-shopping-cart fa-lg\"></i><%if(value.equals("false")){%>Add to cart<%}else{%>"+
+                        "<a href=\"product.jsp?product=" + product_id + "\" class=\"btn <%if(value.equals("false")){%>btn-primary<%}else{%>btn-danger<%}%> btn-sm \" id=\"add-to-cart\" onclick=addCart('" + product_id + "')><i class=\"fa fa-shopping-cart fa-lg\"></i><%if(value.equals("false")){%>Add to cart<%}else{%>"+
                         "Remove from cart<%}%>"+
-                        "</button>" +
+                        "</a>" +
                         "                            </div>\n" +
                         "                        </div>\n" +
                         "                        <div class=\" text-center mt-3\">\n" +
