@@ -57,7 +57,7 @@
                     if (un.value === "") {
                         r2.style.display = "block";
                         r2.innerHTML = "please enter your username!";
-                    }else if (ValidateEmail(em.value) === false) {
+                    } else if (ValidateEmail(em.value) === false) {
                         r2.style.display = "block";
                         r2.innerHTML = "Invalid or null email!";
                     } else if (pswd.value.length < 4) {
@@ -188,15 +188,15 @@
                     </div>
                 </main>
             </div>
-            <div id="layoutAuthentication_footer">
-                <footer class="py-4 bg-light mt-auto">
+            <div id="layoutAuthentication_footer" >
+                <footer class="py-4 bg-light">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2021</div>
+                            <div class="text-muted">Copyright &copy; Your Fashion Delears 2021</div>
                             <div>
-                                <a href="#">Privacy Policy</a>
+                                <a href="terms-and-conditions.jsp">Privacy Policy</a>
                                 &middot;
-                                <a href="#">Terms &amp; Conditions</a>
+                                <a href="terms-and-conditions.jsp">Terms &amp; Conditions</a>
                             </div>
                         </div>
                     </div>

@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
         <!--<script src="/scripts/loader.js"></script> -->
         <style>
 
@@ -66,7 +66,7 @@
                         r3.style.display = "block";
                         r3.innerHTML = "Invalid or null password!";
                     } else {
-                        document.getElementById("loader").style.display="block";
+                        document.getElementById("loader").style.display = "block";
                         var data = "email=" + em.value + "&pswd=" + pswd.value + "&rem=" + rem;
                         var request = new XMLHttpRequest();
                         request.open('POST', url);
@@ -102,7 +102,7 @@
                     var res = ajaxResponse;
                     document.getElementById("r1").style.display = "block";
                     document.getElementById("r1").innerHTML = ajaxResponse;
-                    document.getElementById("loader").style.display="none";
+                    document.getElementById("loader").style.display = "none";
                 }
             }
 
@@ -118,7 +118,7 @@
                                 <div id="loader">
                                     <button class="btn btn-success" type="button" disabled>
                                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                       Sending...
+                                        Sending...
                                     </button>
                                 </div>
                                 <div class="card shadow-lg border-0 rounded-sm mt-5">
@@ -160,20 +160,20 @@
                 </main>
             </div>
             <div id="layoutAuthentication_footer" >
-                <footer class="py-4 bg-light mt-auto">
+                <footer class="py-4 bg-light">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2021</div>
+                            <div class="text-muted">Copyright &copy; Your Fashion Delears 2021</div>
                             <div>
-                                <a href="#">Privacy Policy</a>
+                                <a href="terms-and-conditions.jsp">Privacy Policy</a>
                                 &middot;
-                                <a href="#">Terms &amp; Conditions</a>
+                                <a href="terms-and-conditions.jsp">Terms &amp; Conditions</a>
                             </div>
                         </div>
                     </div>
                 </footer>
             </div>
         </div>
-        
+
     </body>
 </html>

@@ -32,19 +32,19 @@
 </div>
 
 <div id="layoutAuthentication_footer" >
-    <footer class="py-4 bg-light">
-        <div class="container-fluid px-4">
-            <div class="d-flex align-items-center justify-content-between small">
-                <div class="text-muted">Copyright &copy; Your Website 2021</div>
-                <div>
-                    <a href="#">Privacy Policy</a>
-                    &middot;
-                    <a href="#">Terms &amp; Conditions</a>
+        <footer class="py-4 bg-light">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between small">
+                    <div class="text-muted">Copyright &copy; Your Fashion Delears 2021</div>
+                    <div>
+                        <a href="terms-and-conditions.jsp">Privacy Policy</a>
+                        &middot;
+                        <a href="terms-and-conditions.jsp">Terms &amp; Conditions</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-</div>
+        </footer>
+    </div>
 <script>
     function load_data(data) {
         const x = JSON.parse(data);

@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link href="css/styles.css" rel="stylesheet" />
         <style>
-             i{
+            i{
                 padding-top:  0;
                 color: red;
             }
@@ -29,10 +29,10 @@
                     r2.style.display = "none";
                 };
                 btn.onclick = function () {
-                    
+
                     var url = '/reset-password';
                     if (ValidateEmail(em.value) === true) {
-                         var data = "email=" + em;
+                        var data = "email=" + em;
                         var request = new XMLHttpRequest();
                         request.open('POST', url);
                         request.addEventListener('readystatechange', handleResponse);
@@ -102,15 +102,15 @@
                     </div>
                 </main>
             </div>
-            <div id="layoutAuthentication_footer">
-                <footer class="py-4 bg-light mt-auto">
+            <div id="layoutAuthentication_footer" >
+                <footer class="py-4 bg-light">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2021</div>
+                            <div class="text-muted">Copyright &copy; Your Fashion Delears 2021</div>
                             <div>
-                                <a href="#">Privacy Policy</a>
+                                <a href="terms-and-conditions.jsp">Privacy Policy</a>
                                 &middot;
-                                <a href="#">Terms &amp; Conditions</a>
+                                <a href="terms-and-conditions.jsp">Terms &amp; Conditions</a>
                             </div>
                         </div>
                     </div>
