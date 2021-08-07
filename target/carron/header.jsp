@@ -1,6 +1,6 @@
 <head>
     <% Cookie cs[] = request.getCookies(); %>
-    <%!        String value = "";%>
+    <%!        String value = "0";%>
     <%for (Cookie c : cs) {%>
     <%if (c.getName().equals("total")) {%>
     <% value = c.getValue(); %>
