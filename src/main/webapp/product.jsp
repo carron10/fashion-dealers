@@ -104,8 +104,8 @@
                         "                                            <br>\n" +
                         "                                            <a href=\"product.jsp?product=" + product_id + "\">View item</a>\n" +
                         "                                        </i>\n" +
-                        +"<button class=\" btn btn-primary btn-sm \" id=\"add-to-cart\">Add to cart</button>"
-                "                                    </div>\n" +
+                        "<button class=\" btn btn-primary btn-sm \" id=\"add-to-cart\">Add to cart</button>" +
+                        "                                    </div>\n" +
                         "                                </div>\n" +
                         "                            </div>\n" +
                         "                        </div>";
