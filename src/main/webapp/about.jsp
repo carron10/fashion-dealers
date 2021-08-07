@@ -163,7 +163,7 @@
             <div class=" text-center">
                 <h3>About Fashion Dealers</h3>
                 <hr class="raised line">
-                <i>Send us a message we will respond to your email inbox</i>
+                <i>Get to know Fashion Delears</i>
                 <hr class="raised" style="height:1px; width:100%; border-width:0; color:red; background-color:red">
             </div>
 
@@ -174,7 +174,7 @@
                             <i class="fa fa-building-o"></i>
                         </div>
                         <h5>History of  Fashion Dealers</h5>
-                        <p>Here we tell the infornmation about the above heading. We just put the history , the present and any infor we need to put here</p>
+                        <p>Here we tell the infornmation about the above fashion delears . We just put the history , the present and any infor we need to put here</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 about">
@@ -182,8 +182,8 @@
                         <div class="about-icon-box raised">
                             <i class="fa fa-building-o"></i>
                         </div>
-                        <h5>History of  Fashion Dealers</h5>
-                        <p>Here we tell the infornmation about the above heading. We just put the history , the present and any infor we need to put here
+                        <h5>Were are we today</h5>
+                        <p>Here we tell the infornmation about the above Fashion Delears. We just put the history , the present and any infor we need to put here
                        </p>
                     </div>
                 </div>
@@ -192,7 +192,7 @@
                         <div class="about-icon-box raised">
                             <i class="fa fa-building-o"></i>
                         </div>
-                        <h5>The today of  Fashion Dealers</h5>
+                        <h5> Our mession in future</h5>
                         <p>Here we tell the infornmation about the above heading. We just put the history , the present and any infor we need to put here</p>
                     </div>
                 </div>
@@ -201,8 +201,8 @@
             <div class=" text-center" style=" padding: 10px;">
                 <h3>Meet Our Team</h3>
                 <hr class="raised line">
-                <i>Here are is the SRC Team pictures and there contacts</i>
-                <i>Send us a message we will respond to your email inbox</i>
+                <i>Here is our team..</i>
+                
             </div>
             
             <div class="discover-team-area pd">
