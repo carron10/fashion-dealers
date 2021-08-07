@@ -68,6 +68,7 @@
                     "                                <p><strong>Product:</strong><span>" + name + "</span><br>\n" +
                     "                                    <strong>Price: </strong><span>" + price + "</span><br>\n" +
                     "                                    <strong>Available Color: </strong><span>Black,white and blue</span></p>\n" +
+                    "<button class=\"btn btn-primary btn-sm \" id=\"add-to-cart\" onclick=addCart('"+product_id+"')>Add to cart</button>" +
                     "                            </div>\n" +
                     "                        </div>\n" +
                     "                        <div class=\" text-center mt-3\">\n" +
@@ -104,7 +105,7 @@
                         "                                            <br>\n" +
                         "                                            <a href=\"product.jsp?product=" + product_id + "\">View item</a>\n" +
                         "                                        </i>\n" +
-                        "<button class=\" btn btn-primary btn-sm \" id=\"add-to-cart\">Add to cart</button>" +
+                        
                         "                                    </div>\n" +
                         "                                </div>\n" +
                         "                            </div>\n" +
@@ -187,10 +188,9 @@
             btn.removeClass('show');
         }
     }
-    $("#add-to-cart").click(
-            function () {
-
-            });
+    function addCart() {
+        
+    }
 </script>
 </body>
 </html>
