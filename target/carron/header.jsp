@@ -160,7 +160,7 @@
            
             border-radius: 50% ;
         }
-        .fa-shopping-cart{
+        .navbar-header .fa-shopping-cart{
             border: 1px red solid;
             padding-right: 30px;
             padding-left: 30px;
