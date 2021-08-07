@@ -68,7 +68,7 @@
                     "                                <p><strong>Product:</strong><span>" + name + "</span><br>\n" +
                     "                                    <strong>Price: </strong><span>" + price + "</span><br>\n" +
                     "                                    <strong>Available Color: </strong><span>Black,white and blue</span></p>\n" +
-                    "<button class=\"btn btn-primary btn-sm \" id=\"add-to-cart\" onclick=addCart('"+product_id+"')>Add to cart</button>" +
+                    "<button class=\"btn btn-primary btn-sm \" id=\"add-to-cart\" onclick=addCart('"+product_id+"')><i class=\"fa fa-shopping-cart fa-lg\"></i>Add to cart</button>" +
                     "                            </div>\n" +
                     "                        </div>\n" +
                     "                        <div class=\" text-center mt-3\">\n" +
