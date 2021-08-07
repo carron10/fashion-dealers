@@ -1,4 +1,11 @@
 <head>
+    <% Cookie cs[] = request.getCookies(); %>
+    <%!        String value = "";%>
+    <%for (Cookie c : cs) {%>
+    <%if (c.getName().equals("total")) {%>
+    <% value = c.getValue(); %>
+    <% } %>
+    <%} %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="U_AA9uVhETv3td8BslU7SMA-XOXdqo9zdrnkWnV72yY">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -214,7 +221,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-header" style=" padding-top: 5px">
-            <a class="nav-link fa fa-shopping-cart fa-lg" href="cart.jsp"><span class="cart-basket text-center">0</span></a>
+            <a class="nav-link fa fa-shopping-cart fa-lg" href="cart.jsp"><span class="cart-basket text-center"><%= value %></span></a>
         </div>
 
         <div class="collapse navbar-collapse float-right" id="collapsibleNavbar">

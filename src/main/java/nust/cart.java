@@ -40,22 +40,45 @@ public class cart extends HttpServlet {
                 Cookie cs[] = request.getCookies();
                 boolean nn = false;
                 String value = "";
+                boolean avv = false;
+                Cookie cookie = null, cokie2 = null;
+                int total = 0;
+
                 for (Cookie c : cs) {
                     if (c.getName().equals(n)) {
                         nn = true;
                         value = c.getValue();
+                        cokie2 = c;
+                    }
+                    if ("total".equals(c.getName())) {
+                        avv = true;
+                        cookie = c;
+                        total = Integer.parseInt(c.getValue());
                     }
                 }
                 if (nn == true) {
-                    Cookie c = new Cookie(n, "false");
-                    c.setMaxAge(1800);
-                    response.addCookie(c);
+                    if ("true".equals(value)) {
+                        cokie2.setValue("false");
+                        response.addCookie(cokie2);
+                        total--;
+                    } else {
+                        cokie2.setValue("true");
+                        response.addCookie(cokie2);
+                        total++;
+                    }
                 } else {
                     Cookie c = new Cookie(n, "true");
                     c.setMaxAge(1800);
                     response.addCookie(c);
                 }
-                response.sendRedirect("product.jsp?product="+n);
+                if (avv == true) {
+                    cookie.setValue(String.valueOf(total));
+                    response.addCookie(cookie);
+                } else {
+                    Cookie c = new Cookie("total", String.valueOf(total));
+                    response.addCookie(c);
+                }
+                response.sendRedirect("product.jsp?product=" + n);
             } else {
                 response.sendRedirect("index.jsp");
             }
