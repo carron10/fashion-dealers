@@ -31,7 +31,6 @@
                     background: #fff none repeat scroll 0 0;
                     padding: 50px 20px 20px;
                     position: relative;
-
                 }
                 .about{
                     margin-top: 40px;
@@ -162,7 +161,7 @@
                 
             </style>
             <div class=" text-center">
-                <h3>About this Website</h3>
+                <h3>About Fashion Dealers</h3>
                 <hr class="raised line">
                 <i>Send us a message we will respond to your email inbox</i>
                 <hr class="raised" style="height:1px; width:100%; border-width:0; color:red; background-color:red">
@@ -174,7 +173,7 @@
                         <div class="about-icon-box raised">
                             <i class="fa fa-building-o"></i>
                         </div>
-                        <h3>About this site</h3>
+                        <h5>History of  Fashion Dealers</h5>
                         <p>Here we tell the infornmation about the above heading. We just put the history , the present and any infor we need to put here</p>
                     </div>
                 </div>
@@ -183,7 +182,7 @@
                         <div class="about-icon-box raised">
                             <i class="fa fa-building-o"></i>
                         </div>
-                        <h3>About Src</h3>
+                        <h5>History of  Fashion Dealers</h5>
                         <p>Here we tell the infornmation about the above heading. We just put the history , the present and any infor we need to put here
                        </p>
                     </div>
@@ -193,7 +192,7 @@
                         <div class="about-icon-box raised">
                             <i class="fa fa-building-o"></i>
                         </div>
-                        <h3>About Our Company</h3>
+                        <h5>The today of  Fashion Dealers</h5>
                         <p>Here we tell the infornmation about the above heading. We just put the history , the present and any infor we need to put here</p>
                     </div>
                 </div>
@@ -215,14 +214,14 @@
                                     <img src="img/3.jpg" alt="">
                                 </div>
                                 <div class="team-desc">
-                                    <h3>Naison Ndlovu</h3>
-                                    <span>Students Affairs</span>
+                                    <h3>Nyasha</h3>
+                                    <span>Founder</span>
                                     <a href="#" class=""><i class="fa fa-facebook"></i></a>
                                     <a href="#" class=""><i class="fa fa-twitter"></i></a>
                                     <a href="#" class=""><i class="fa fa-linkedin"></i></a>
                                     <a href="#" class=""><i class="fa fa-instagram"></i></a>
                                     <a href="#" class=""><i class="fa fa-dribbble"></i></a>
-                                    <p>Am happy to be part of Src...Hey Naison(Here you put your BIO  kkkkk)</p>
+                                    <p>Nyasha is    ------</p>
                                 </div>
                             </div>
                         </div>
@@ -232,14 +231,14 @@
                                     <img src="img/3.jpg" alt="">
                                 </div>
                                 <div class="team-desc">
-                                    <h3>Desire KKKKKK</h3>
-                                    <span>Information and this this</span>
+                                    <h3>Cynthia</h3>
+                                    <span>Core Founder</span>
                                     <a href="#" class=""><i class="fa fa-facebook"></i></a>
                                     <a href="#" class=""><i class="fa fa-twitter"></i></a>
                                     <a href="#" class=""><i class="fa fa-linkedin"></i></a>
                                     <a href="#" class=""><i class="fa fa-instagram"></i></a>
                                     <a href="#" class=""><i class="fa fa-dribbble"></i></a>
-                                    <p>Here put the bio of the above mentioned person ..Enjoy</p>
+                                    <p>Cynthia is a business women..........</p>
                                 </div>
                             </div>
                         </div>
@@ -250,7 +249,7 @@
                                 </div>
                                 <div class="team-desc">
                                     <h3>Someone SSS</h3>
-                                    <span>Just a Student</span>
+                                    <span>CEO</span>
                                     <a href="#" class=""><i class="fa fa-facebook"></i></a>
                                     <a href="#" class=""><i class="fa fa-twitter"></i></a>
                                     <a href="#" class=""><i class="fa fa-linkedin"></i></a>
@@ -267,7 +266,7 @@
                                 </div>
                                 <div class="team-desc">
                                     <h3>Noone M</h3>
-                                    <span>Class Rep(kkk)</span>
+                                    <span>Human Resources Manager</span>
                                     <a href="#" class=""><i class="fa fa-facebook"></i></a>
                                     <a href="#" class=""><i class="fa fa-twitter"></i></a>
                                     <a href="#" class=""><i class="fa fa-linkedin"></i></a>
@@ -289,7 +288,7 @@
                                 </div>
                                 <div class="team-desc">
                                     <h3>Naison Ndlovu</h3>
-                                    <span>Students Affairs</span>
+                                    <span>Finanace Manager</span>
                                     <a href="#" class=""><i class="fa fa-facebook"></i></a>
                                     <a href="#" class=""><i class="fa fa-twitter"></i></a>
                                     <a href="#" class=""><i class="fa fa-linkedin"></i></a>
@@ -307,9 +306,9 @@
                                 <div class="team-desc">
                                     <h3>Desire KKKKKK</h3>
                                     <span>Information and this this</span>
-                                    <a href="#" class=""><i class="fa fa-facebook"></i></a>
-                                    <a href="#" class=""><i class="fa fa-twitter"></i></a>
-                                    <a href="#" class=""><i class="fa fa-linkedin"></i></a>
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
                                     <a href="#" class=""><i class="fa fa-instagram"></i></a>
                                     <a href="#" class=""><i class="fa fa-dribbble"></i></a>
                                     <p>Here put the bio of the above mentioned person ..Enjoy</p>
@@ -396,7 +395,7 @@
                                 </div>
                                 <div class="team-desc">
                                     <h3>Someone SSS</h3>
-                                    <span>Just a Student</span>
+                                    <span>Human Resouser</span>
                                     <a href="#" class=""><i class="fa fa-facebook"></i></a>
                                     <a href="#" class=""><i class="fa fa-twitter"></i></a>
                                     <a href="#" class=""><i class="fa fa-linkedin"></i></a>
@@ -412,14 +411,14 @@
                                     <img src="img/3.jpg" alt="">
                                 </div>
                                 <div class="team-desc">
-                                    <h3>Noone M</h3>
-                                    <span>Class Rep(kkk)</span>
+                                    <h3>Carron Muleya</h3>
+                                    <span>Finance Manager</span>
                                     <a href="#" class=""><i class="fa fa-facebook"></i></a>
                                     <a href="#" class=""><i class="fa fa-twitter"></i></a>
                                     <a href="#" class=""><i class="fa fa-linkedin"></i></a>
                                     <a href="#" class=""><i class="fa fa-instagram"></i></a>
                                     <a href="#" class=""><i class="fa fa-dribbble"></i></a>
-                                    <p>Here put the bio of the above mentioned person </p>
+                                    <p>Think in other terms</p>
                                 </div>
                             </div>
                         </div>

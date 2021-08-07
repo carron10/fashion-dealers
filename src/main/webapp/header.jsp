@@ -198,7 +198,7 @@
 </head>
 
 <body>
-    <a id="button" href="#body"><i class="fa fa-chevron-up"></i></a>
+    <a id="button" href="#"><i class="fa fa-chevron-up"></i></a>
     <div id="loader" class="center" style="display: none;">
         <button class="btn btn-success" type="button" disabled="">
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
@@ -213,8 +213,8 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-header" style=" padding-top: 5px" href="/index.jsp">
-            <a class="nav-link fa fa-shopping-cart fa-lg" href="services.jsp"><span class="cart-basket text-center">0</span></a>
+        <div class="navbar-header" style=" padding-top: 5px">
+            <a class="nav-link fa fa-shopping-cart fa-lg" href="cart.jsp"><span class="cart-basket text-center">0</span></a>
         </div>
 
         <div class="collapse navbar-collapse float-right" id="collapsibleNavbar">

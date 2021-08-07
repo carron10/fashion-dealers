@@ -15,7 +15,9 @@
                     <div class="footer-widgets">
                         <h3>ABOUT</h3>
                         <p>
-                            We give a summary about this website.. e.g this site have been developed for this this and this this in the aim of this this .</p>
+                            Fashion Dealears is a company which specialises on selling clothes in local and national. We focus on providing the best trending 
+                            clothes in an affordable price. 
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-3 pd-left-70 col-sm-6">
@@ -23,12 +25,12 @@
                         <h3>Support Links</h3>
                         
                         <ul id="navigation f">
-                            <li><a class="link" href="#!" id="index.jsp">Home</a></li>
-                            <li><a class="link" href="#!" id="about.jsp">About us</a></li>
+                            <li><a class="link" href="index.jsp">Home</a></li>
+                            <li><a class="link" href="about.jsp">About us</a></li>
                             <!--<li><a href="project.html">Project</a></li>-->
-                            <li><a class="link" href="#!" id="services.jsp">Service</a></li>
-                            <li><a href="login.jsp">Login</a></li>
-                            <li><a class="link" id="contact.jsp" href="#!">Contact</a></li>
+                            <li><a class="link" href="services.jsp">Service</a></li>
+                            <li><a  href="login.jsp">Login</a></li>
+                            <li><a class="link" id="contact.jsp">Contact</a></li>
                             <li><a class="link" id="terms-and-conditions.jsp">Term and Conditions</a></li>
                         </ul>
                     </div>
