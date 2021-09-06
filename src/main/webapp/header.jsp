@@ -1,11 +1,14 @@
 <head>
-    <% Cookie cs[] = request.getCookies(); %>
+    <% Cookie cs[] = null; %>
+    <% cs=request.getCookies(); %>
+    <%if (cs != null) {%>
     <%!        String value = "0";%>
     <%for (Cookie c : cs) {%>
     <%if (c.getName().equals("total")) {%>
     <% value = c.getValue(); %>
     <% } %>
     <%} %>
+    <%}%>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="U_AA9uVhETv3td8BslU7SMA-XOXdqo9zdrnkWnV72yY">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -164,14 +167,14 @@
             width: 15px;
             height: 15px;
             color:  #ff0000;
-           
+
             border-radius: 50% ;
         }
         .navbar-header .fa-shopping-cart{
             border: 1px red solid;
             padding-right: 30px;
             padding-left: 30px;
-            
+
         }
     </style>
 
@@ -182,36 +185,36 @@
                 $(this).html("Added to Cart");
             });
         });
-        document.onreadystatechange = function () {
-            if (document.readyState !== "complete") {
-                loader("start");
-            } else {
-                loader("stop");
-            }
-        };
-        function loader(nn) {
-            if (nn === "start") {
-
-                $("#loader").show();
-                $(".loader").show();
-            } else {
-                $("#loader").hide();
-                $(".loader").hide();
-                //  $(".body").show();
-            }
-        }
+//        document.onreadystatechange = function () {
+//            if (document.readyState !== "complete") {
+//                loader("start");
+//            } else {
+//                loader("stop");
+//            }
+//        };
+//        function loader(nn) {
+//            if (nn === "start") {
+//
+//                $("#loader").show();
+//                $(".loader").show();
+//            } else {
+//                $("#loader").hide();
+//                $(".loader").hide();
+//                //  $(".body").show();
+//            }
+//        }
     </script>
 
 </head>
 
 <body>
     <a id="button" href="#"><i class="fa fa-chevron-up"></i></a>
-    <div id="loader" class="center" style="display: none;">
+<!--    <div id="loader" class="center" style="display: none;">
         <button class="btn btn-success" type="button" disabled="">
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             Loading...
         </button>
-    </div>
+    </div>-->
 
     <!--Start of Navigation bar -->
     <!--Start of Navigation bar -->
@@ -221,7 +224,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-header" style=" padding-top: 5px">
-            <a class="nav-link fa fa-shopping-cart fa-lg" href="cart.jsp"><span class="cart-basket text-center"><%= value %></span></a>
+            <a class="nav-link fa fa-shopping-cart fa-lg" href="cart.jsp"><span class="cart-basket text-center"><%= value%></span></a>
         </div>
 
         <div class="collapse navbar-collapse float-right" id="collapsibleNavbar">

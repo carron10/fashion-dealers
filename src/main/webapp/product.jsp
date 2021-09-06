@@ -6,7 +6,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="windows-1256"%>
-
++
 
 
 <% String n = request.getParameter("product");%>
@@ -79,8 +79,8 @@
                         "                                <p><strong>Product:</strong><span>" + name + "</span><br>\n" +
                         "                                    <strong>Price: </strong><span>" + price + "</span><br>\n" +
                         "                                    <strong>Available Color: </strong><span>Black,white and blue</span></p>\n" +
-                        "<a href=\"product.jsp?product=" + product_id + "\" class=\"btn <%if(value.equals("false")){%>btn-primary<%}else{%>btn-danger<%}%> btn-sm \" id=\"add-to-cart\" onclick=addCart('" + product_id + "')><i class=\"fa fa-shopping-cart fa-lg\"></i><%if(value.equals("false")){%>Add to cart<%}else{%>"+
-                        "Remove from cart<%}%>"+
+                        "<a href=\"product.jsp?product=" + product_id + "\" class=\"btn <%if(value.equals("false")){%>btn-primary<%}else{%>btn-danger<%}%> btn-sm \" id=\"add-to-cart\" onclick=addCart('" + product_id + "')><i class=\"fa fa-shopping-cart fa-lg\"></i><%if(value.equals("false")){%>Add to cart<%}else{%>" +
+                        "Remove from cart<%}%>" +
                         "</a>" +
                         "                            </div>\n" +
                         "                        </div>\n" +
