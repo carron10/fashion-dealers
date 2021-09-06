@@ -1,6 +1,6 @@
 <head>
-    <% Cookie cs[] = null; %>
-    <% cs=request.getCookies(); %>
+    <% Cookie cs[] =null;
+    cs= request.getCookies(); %>
     <%if (cs != null) {%>
     <%!        String value = "0";%>
     <%for (Cookie c : cs) {%>
@@ -185,36 +185,36 @@
                 $(this).html("Added to Cart");
             });
         });
-//        document.onreadystatechange = function () {
-//            if (document.readyState !== "complete") {
-//                loader("start");
-//            } else {
-//                loader("stop");
-//            }
-//        };
-//        function loader(nn) {
-//            if (nn === "start") {
-//
-//                $("#loader").show();
-//                $(".loader").show();
-//            } else {
-//                $("#loader").hide();
-//                $(".loader").hide();
-//                //  $(".body").show();
-//            }
-//        }
+        document.onreadystatechange = function () {
+            if (document.readyState !== "complete") {
+                loader("start");
+            } else {
+                loader("stop");
+            }
+        };
+        function loader(nn) {
+            if (nn === "start") {
+
+                $("#loader").show();
+                $(".loader").show();
+            } else {
+                $("#loader").hide();
+                $(".loader").hide();
+                //  $(".body").show();
+            }
+        }
     </script>
 
 </head>
 
 <body>
     <a id="button" href="#"><i class="fa fa-chevron-up"></i></a>
-<!--    <div id="loader" class="center" style="display: none;">
+    <div id="loader" class="center" style="display: none;">
         <button class="btn btn-success" type="button" disabled="">
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             Loading...
         </button>
-    </div>-->
+    </div>
 
     <!--Start of Navigation bar -->
     <!--Start of Navigation bar -->
