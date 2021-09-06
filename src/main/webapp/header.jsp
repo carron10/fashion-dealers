@@ -185,24 +185,7 @@
                 $(this).html("Added to Cart");
             });
         });
-        document.onreadystatechange = function () {
-            if (document.readyState !== "complete") {
-                loader("start");
-            } else {
-                loader("stop");
-            }
-        };
-        function loader(nn) {
-            if (nn === "start") {
-
-                $("#loader").show();
-                $(".loader").show();
-            } else {
-                $("#loader").hide();
-                $(".loader").hide();
-                //  $(".body").show();
-            }
-        }
+        
     </script>
 
 </head>
