@@ -19,7 +19,7 @@ $(document).ready(function () {
     updateCart();
     $(".addtocart").click(
             function () {
-              addToCart("product"+this.id,1,14);
+              addToCart("product"+this.attr("id"),1,14);
             }
     );
 });
