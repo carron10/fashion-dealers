@@ -368,7 +368,6 @@
                                 + "<td>" + price + "</td>"
                                 + "<td><button onclick=\"removeCookie('product" + product_id + "')\" class=\"btn btn-link fa fa-remove\"></button></td>" +
                                 "</tr>";
-
                         content += data;
                     }
                     if (content !== "") {
@@ -402,16 +401,15 @@
             <% Cookie c = cookies[i]; %>
             <%if (c.getName().startsWith("product")) {
                     int n = Integer.parseInt(c.getName().replace("product", ""));
-                    if(i!=cookies.length-1){
-                        data += n + ",";
-                    }else{
+                    if(i==cookies.length-1){
                         data += n;
+                    }else{
+                        data += n+",";
                     }
                 }%>
             <%}%>
                     return "<%if (!data.isEmpty()) {%> <%= data%> "<%} else {%> null <%}%>;
                 }
-
                 function getCookie(cname){
                     let name = cname + "=";
                     let ca = document.cookie.split(';');
