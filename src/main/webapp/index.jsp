@@ -100,38 +100,40 @@ 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
             </div>
             <div class=" row categories">
                 <div class="category">
+                    <a href="products.jsp">
                     <img src="image/images (36).jpeg" style=" height: 90%; width: 100%">
+                     </a>
                     <div class=" card">
                         <div class=" card-footer">
-                            All Wear
+                            <a href="products.jsp">All Wear </a>
                         </div>
                     </div>
                 </div>
                 <div class="category">
-                    <img src="image/IMG-20210729-WA0033.jpg" style=" height: 90%; width: 100%">
+                    <a href="women-wear.jsp"><img src="image/IMG-20210729-WA0033.jpg" style=" height: 90%; width: 100%"></a>
                     <div class=" card">
                         <div class=" card-footer">
-                            Ladies Wear
+                            <a href="women-wear.jsp">Ladies Wear</a>
                         </div>
                     </div>        
                 </div>
                 <div class="category">
 
-                    <img src="image/men-wear.PNG" style=" height: 90%; width: 100%">
+                    <a href="men-wear.jsp"><img src="image/men-wear.PNG" style=" height: 90%; width: 100%"></a>
                     <div class=" card">
 
                         <div class=" card-footer">
-                            Men Wear
+                            <a href="men-wear.jsp">Men Wear</a>
                         </div>
 
                     </div>
                 </div>
                 <div class="category">
-                    <img src="image/kids.jpg" style=" height: 90%; width: 100%">
+                    <a href="kids-wear.jsp"><img src="image/kids.jpg" style=" height: 90%; width: 100%"></a>
                     <div class=" card">
 
                         <div class=" card-footer">
-                            Kids Wear
+                            <a href="kids-wear.jsp">Kids Wearz</a>
 
                         </div>
 
