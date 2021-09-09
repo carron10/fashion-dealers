@@ -185,7 +185,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-header" style=" padding-top: 5px">
-            <a class="nav-link fa fa-shopping-cart fa-lg" href="cart.jsp"><span class="cart-basket text-center" id="my_cart">0</span></a>
+            <a class="nav-link fa fa-shopping-cart fa-lg" href="cart.jsp"><span class="cart-basket text-center" id="my_cart"></span></a>
         </div>
 
         <div class="collapse navbar-collapse float-right" id="collapsibleNavbar">
