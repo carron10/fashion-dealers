@@ -284,7 +284,7 @@
                 var picture = x.product[i].picture;
                 var product_id = x.product[i].p_id;
                 var description = x.product[i].description;
-                var prod="{'name':'"+name+"','category':'"+cateory+"','picture':'"+picture+"','id':'"+product_id+"','description':'"+description+"','price':'"+price+"','size':'"+size+"'}";
+                var prod="{\'name\':\'"+name+"\',\'category\':\'"+cateory+"\',\'picture\':\'"+picture+"\',\'id\':\'"+product_id+"\',\'description\':\'"+description+"\',\'price\':\'"+price+"\',\'size\':\'"+size+"\'}";
                 content = "<div class=\" card\">\n" +
                         "                            <div class=\" card-body\">\n" +
                         "                                <img src=\"image/" + picture + "\" width=\"100%\" height=\"40%\" alt=\"login_background\"/>\n" +
@@ -293,7 +293,7 @@
                         "                                <p><strong>Product:</strong><span>" + name + "</span><br>\n" +
                         "                                    <strong>Price: </strong><span>" + price + "</span><br>\n" +
                         "                                    <strong>Available Color: </strong><span>Black,white and blue</span></p>\n" +
-                        " <button onclick=\"addToCart('product"+product_id+"','"+prod+"','12');\" class=\"btn btn-success btn-sm\" id=\""+product_id+"\"><i class=\"fa fa-cart-plus\"></i>Add to cart</button>" +
+                        " <button onclick=\"addToCart('product"+product_id+"','"+prod+"',12);\" class=\"btn btn-success btn-sm\" id=\""+product_id+"\"><i class=\"fa fa-cart-plus\"></i>Add to cart</button>" +
                         "                            </div>\n" +
                         "                        </div>\n" +
                         "                        <div class=\" text-center mt-3\">\n" +
