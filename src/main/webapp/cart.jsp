@@ -340,7 +340,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <div class="d-flex align-content-between justify-content-between">
+                        <div class="d-flex align-content-between justify-content-between" style=" width: 100%">
                             <div><a href="products.jsp" class="btn">Continue Shopping</a></div>
                             <div><a href="checkout.jsp" class="btn fa fa-shopping-cart bg-danger">Check Out</a></div>
                         </div>
