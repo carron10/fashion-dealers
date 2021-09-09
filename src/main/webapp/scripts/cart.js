@@ -19,3 +19,7 @@ function updateCart() {
     }
     $("#my_cart").text(j);
 }
+$(document).ready(function () {
+    updateCart();
+   
+});

@@ -412,10 +412,7 @@
             }
         }
         
-     $(document).ready(function () {
-    updateCart();
-   
-});
+     
 
 function addToCart(cname, cvalue, exdays) {
   const d = new Date();
