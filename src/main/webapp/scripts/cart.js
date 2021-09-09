@@ -21,5 +21,4 @@ function updateCart() {
 }
 $(document).ready(function () {
     updateCart();
-   
 });
