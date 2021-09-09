@@ -10,10 +10,9 @@
 
     <!--Import header -->
 
- <% String n = request.getParameter("content");%>
-    <% if (n == null) { %>
+ 
     <jsp:include page="header.jsp?active=null"></jsp:include>
-    <% }%>
+   
 
         <div id="body">
             <style>
