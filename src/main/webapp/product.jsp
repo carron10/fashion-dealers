@@ -14,7 +14,7 @@
 <!DOCTYPE html>
 <html>
     <jsp:include page="header.jsp?active=about"></jsp:include>
-
+    
         <div class="container-fluid landlord-details" >  
             <div  id="contents" style=" margin: 0">
 
@@ -27,13 +27,10 @@
                 </div>
             </div>
         </div>
-
-
         <div class="col-sm-2 sidenav">
 
         </div>
-
-    </div>
+</div>
     <div id="layoutAuthentication_footer" >
         <footer class="py-4 bg-light">
             <div class="container-fluid px-4">
