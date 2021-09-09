@@ -280,10 +280,10 @@
             </div>
             <div class=" container">
                 <br>
-                
+
                 <h4 class="fa fa-shopping-cart"> SHOPPING CART</h4>
                 <hr>
-                <table class="table table-bordered">
+                <table class="table table-bordered" id="summary-table" style=" display: none">
                     <thead class="thead-light">
                         <tr>
                             <th scope="col">Image</th>
@@ -295,30 +295,11 @@
                             <th scope="col">Remove</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td ><img src="image/women/images%20(35).jpeg" style="width:80px; height:80px;"></td>
-                            <td>Ladies Shirts</td>
-                            <td>112</td>
-                            <td>$10</td>
-                            <td><input type="text" class="form-control form-control-sm"  value="1" </td>
-                            <td>$10</td>
-                            <td><button class="btn btn-link fa fa-remove"></button></td>
-                        </tr>
-                        <tr>
-                            <td><img src="image/women/images%20(35).jpeg" style="width:80px; height:80px;"></td>
-                            <td>Ladies Shirts</td>
-                            <td>112</td>
-                            <td>$10</td>
-                            <td><input type="text" class="form-control form-control-sm"  value="1" </td>
-                            <td>$10</td>
-                            <td><button class="btn btn-link fa fa-remove"></button></td>
-                        </tr>
+                    <tbody id="contents">
+
                     </tbody>
                 </table>
                 <div class=" row">
-
-
                     <div class="col-sm-4">
 
                     </div>
@@ -326,7 +307,7 @@
 
                     </div>
                     <div class="col-sm-4">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered " id="totals-table" style=" display: none">
                             <thead class="thead-light">
                                 <tr>
                                     <th scope="col">Sub total</th>
@@ -360,6 +341,73 @@
         <jsp:include page="footer.jsp"></jsp:include>
 
         <!-- Footer Area End -->
+        <script>
+            function load_data(data) {
+                const x = JSON.parse(data);
 
+                var content = "";
+
+                for (var i = 0; i < x.products.length; i++) {
+                    var size = x.products[i].size;
+                    var price = x.products[i].price;
+                    var years = x.products[i].years;
+                    var name = x.products[i].name;
+                    var time = x.products[i].time;
+                    var cateory = x.products[i].category;
+                    var picture = x.products[i].picture;
+                    var product_id = x.products[i].p_id;
+                    var description = x.products[i].description;
+                    var data = "";
+                    data += "<tr>" +
+                            "<td><img src=\"image/" + picture + "\" alt=\"" + name + "\" style=\"width:80px; height:80px;\"></td>"
+                            + "<td>" + name + "</td>"
+                            + "<td>" + product_id + "</td>"
+                            + "<td>" + price + "</td>"
+                            + "<td><input type=\"text\" class=\"form-control form-control-sm\"  value=\"1\" </td>"
+                            + "<td>" + price + "</td>"
+                            + "<td><button class=\"btn btn-link fa fa-remove\"></button></td>" +
+                            "</tr>";
+
+                    content += data;
+                }
+                if (content !== "") {
+                    $("#contents").html(content);
+                    $("#totals-table").css("display", "block");
+                    $("#summary-table").css("display", "block");
+                }
+            }
+            $(document).ready(function () {
+                var request = $.ajax({
+                    url: "/get_product_list",
+                    method: "POST",
+                    data: {ids: get_products_on_cart()},
+                    dataType: "html"
+                });
+                request.done(function (msg) {
+                    load_data(msg);
+                });
+            });
+
+
+            function get_products_on_cart() {
+                let ca = document.cookie.split(';');
+                var j = 0;
+                var data = '';
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.startsWith("product")) {
+                        var id = c.replace("product", "");
+                        data = +id+",";
+                        j++;
+                    }
+                }
+                window.alert(data);
+                return data;
+            }
+
+        </script>
     </body>
 </html>

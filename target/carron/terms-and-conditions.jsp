@@ -59,7 +59,7 @@
                     <!-- /wp:heading -->
 
                     <!-- wp:paragraph -->
-                    <p>Our website address is: https://nust-web.herokuapp.com.</p>
+                    <p>Our website address is: https://fashion-delears.herokuapp.com/</p>
                     <!-- /wp:paragraph -->
 
                     <!-- wp:heading -->

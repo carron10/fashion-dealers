@@ -291,22 +291,22 @@ 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
                 <div class="carousel-item active">
                     <img src="image/jeans-2.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>The SRC is there for you</h5>
-                        <p>We put any motivation text here.</p>
+                        <h5>All size for women wears</h5>
+                        <p>...............................</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="image/IMG-20210726-WA0125.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Studend Represented 24/7</h5>
-                        <p>We put any motivation text here.</p>
+                        <h5>Find Different Types of Shoes</h5>
+                        <p>We supply to different areas.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="image/IMG-20210726-WA0155.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Get Libray Here</h5>
-                        <p>fdsa</p>
+                        <h5>Discover Trending Fashion</h5>
+                        <p>Be always on top</p>
                     </div>
                 </div>
             </div>
