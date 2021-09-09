@@ -313,39 +313,39 @@
                     </tbody>
                 </table>
                 <div class=" row">
-                    <table class="table table-bordered">
 
-                        <div class="col-md-3 col-sm-6">
 
-                        </div>
-                        <div class="col-md-3 col-sm-6">
+                    <div class="col-md-3 col-sm-6">
 
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <table class="table table-bordered">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Sub total</th>
+                                    <th scope="col">$20</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Delivery Fee</td>
+                                    <td>$3</td>
+                                </tr>
+                                <tr class="thead-light">
+                                    <td>TOTAL:</td>
+                                    <td>$23</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="d-flex align-content-between justify-content-between">
+                            <div><a href="products.jsp" class="btn">Continue Shopping</a></div>
+                            <div><a href="checkout.jsp" class="btn fa fa-shopping-cart bg-danger">Check Out</a></div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <table class="table table-bordered">
-                                <thead class="thead-light">
-                                    <tr>
-                                        <th scope="col">Sub total</th>
-                                        <th scope="col">$20</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Delivery Fee</td>
-                                        <td>$3</td>
-                                    </tr>
-                                    <tr class="thead-light">
-                                        <td>TOTAL:</td>
-                                        <td>$23</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="d-flex align-content-between justify-content-between">
-                                <div><a href="products.jsp" class="btn">Continue Shopping</a></div>
-                                <div><a href="checkout.jsp" class="btn fa fa-shopping-cart bg-danger">Check Out</a></div>
-                            </div>
-                            
-                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
