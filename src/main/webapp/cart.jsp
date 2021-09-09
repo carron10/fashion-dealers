@@ -399,8 +399,8 @@
                         c = c.substring(1);
                     }
                     if (c.startsWith("product")) {
-                        var id = c.replace("product", "");
-                        data = +id+",";
+                        
+                        data = +c+",";
                         j++;
                     }
                 }
