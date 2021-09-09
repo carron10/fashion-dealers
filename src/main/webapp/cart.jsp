@@ -81,7 +81,7 @@
                         <td>Ladies Shirts</td>
                         <td>112</td>
                         <td>$10</td>
-                        <td>1</td>
+                        <td><input type="text" class="form-control"  value="1" </td>
                         <td>$10</td>
                         <td><button class="btn btn-link fa fa-remove"></button></td>
                     </tr>
