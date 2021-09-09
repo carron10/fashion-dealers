@@ -133,8 +133,7 @@ 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
                     <div class=" card">
 
                         <div class=" card-footer">
-                            <a href="kids-wear.jsp">Kids Wearz</a>
-
+                            <a href="kids-wear.jsp">Kids Wear</a>
                         </div>
 
                     </div>

@@ -1,14 +1,5 @@
 <head>
-    <% Cookie cs[] =null;
-    cs= request.getCookies(); %>
-    <%if (cs != null) {%>
-    <%!        String value = "0";%>
-    <%for (Cookie c : cs) {%>
-    <%if (c.getName().equals("total")) {%>
-    <% value = c.getValue(); %>
-    <% } %>
-    <%} %>
-    <%}%>
+   
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="U_AA9uVhETv3td8BslU7SMA-XOXdqo9zdrnkWnV72yY">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -16,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts/cart.js"></script>
     <style>
         .navbar a{
             color: #000;
@@ -207,7 +199,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-header" style=" padding-top: 5px">
-            <a class="nav-link fa fa-shopping-cart fa-lg" href="cart.jsp"><span class="cart-basket text-center"><%= value%></span></a>
+            <a class="nav-link fa fa-shopping-cart fa-lg" href="cart.jsp"><span class="cart-basket text-center" id="my_cart">0</span></a>
         </div>
 
         <div class="collapse navbar-collapse float-right" id="collapsibleNavbar">
