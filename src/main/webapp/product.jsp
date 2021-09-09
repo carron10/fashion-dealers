@@ -6,8 +6,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="windows-1256"%>
-+
-
 
 <% String n = request.getParameter("product");%>
 <% if (n != null) { %>
@@ -27,7 +25,7 @@
                 </div>
             </div>
         </div>
-      
+</div>
     <div id="layoutAuthentication_footer" >
         <footer class="py-4 bg-light">
             <div class="container-fluid px-4">
@@ -193,7 +191,6 @@
 </html>
 <%} else {%>
 <% response.sendRedirect("products.jsp"); %>
-
 <%}%>
 
 

@@ -170,26 +170,12 @@
         }
     </style>
 
-    <script>
-
-        $(document).ready(function () {
-            $(".r_more").click(function () {
-                $(this).html("Added to Cart");
-            });
-        });
-        
-    </script>
-
+   
 </head>
 
 <body>
     <a id="button" href="#"><i class="fa fa-chevron-up"></i></a>
-    <div id="loader" class="center" style="display: none;">
-        <button class="btn btn-success" type="button" disabled="">
-            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-            Loading...
-        </button>
-    </div>
+  
 
     <!--Start of Navigation bar -->
     <!--Start of Navigation bar -->
