@@ -341,78 +341,72 @@
 
         <jsp:include page="footer.jsp"></jsp:include>
 
-        <!-- Footer Area End -->
-        <script>
-            function load_data(data) {
-                const x = JSON.parse(data);
+            <!-- Footer Area End -->
+            <script>
+                function load_data(data) {
+                    const x = JSON.parse(data);
 
-                var content = "";
+                    var content = "";
 
-                for (var i = 0; i < x.products.length; i++) {
-                    var size = x.products[i].size;
-                    var price = x.products[i].price;
-                    var years = x.products[i].years;
-                    var name = x.products[i].name;
-                    var time = x.products[i].time;
-                    var cateory = x.products[i].category;
-                    var picture = x.products[i].picture;
-                    var product_id = x.products[i].p_id;
-                    var description = x.products[i].description;
-                    var data = "";
-                    data += "<tr>" +
-                            "<td><img src=\"image/" + picture + "\" alt=\"" + name + "\" style=\"width:80px; height:80px;\"></td>"
-                            + "<td>" + name + "</td>"
-                            + "<td>" + product_id + "</td>"
-                            + "<td>" + price + "</td>"
-                            + "<td><input type=\"text\" class=\"form-control form-control-sm\"  value=\"1\" </td>"
-                            + "<td>" + price + "</td>"
-                            + "<td><button class=\"btn btn-link fa fa-remove\"></button></td>" +
-                            "</tr>";
+                    for (var i = 0; i < x.products.length; i++) {
+                        var size = x.products[i].size;
+                        var price = x.products[i].price;
+                        var years = x.products[i].years;
+                        var name = x.products[i].name;
+                        var time = x.products[i].time;
+                        var cateory = x.products[i].category;
+                        var picture = x.products[i].picture;
+                        var product_id = x.products[i].p_id;
+                        var description = x.products[i].description;
+                        var data = "";
+                        data += "<tr>" +
+                                "<td><img src=\"image/" + picture + "\" alt=\"" + name + "\" style=\"width:80px; height:80px;\"></td>"
+                                + "<td>" + name + "</td>"
+                                + "<td>" + product_id + "</td>"
+                                + "<td>" + price + "</td>"
+                                + "<td><input type=\"text\" class=\"form-control form-control-sm\"  value=\"1\" </td>"
+                                + "<td>" + price + "</td>"
+                                + "<td><button class=\"btn btn-link fa fa-remove\"></button></td>" +
+                                "</tr>";
 
-                    content += data;
-                }
-                if (content !== "") {
-                    $("#contents").html(content);
-                    $("#totals-table").css("display", "block");
-                    $("#summary-table").css("display", "block");
-                }
-            }
-            $(document).ready(function () {
-                var data = get_products_on_cart();
-                if (data !== null) {
-                    var request = $.ajax({
-                        url: "/get_product_list",
-                        method: "POST",
-                        data: {ids: data},
-                        dataType: "html"
-                    });
-                    request.done(function (msg) {
-                        load_data(msg);
-                    });
-                }else{
-                    $("#msg").text("There is nothing on the cart");
-                }
-            });
-
-
-            function get_products_on_cart() {
-                let ca = document.cookie.split(';');
-                var j = 0;
-                var data = '';
-                for (let i = 0; i < ca.length; i++) {
-                    let c = ca[i];
-                    while (c.charAt(0) === ' ') {
-                        c = c.substring(1);
+                        content += data;
                     }
-                    if (c.startsWith("product")) {
-
-                        data = +c + ",";
-                        j++;
+                    if (content !== "") {
+                        $("#contents").html(content);
+                        $("#totals-table").css("display", "block");
+                        $("#summary-table").css("display", "block");
                     }
                 }
-                window.alert(data);
-                return data;
-            }
+                $(document).ready(function () {
+                    var data = get_products_on_cart();
+                    if (data !== null) {
+                        var request = $.ajax({
+                            url: "/get_product_list",
+                            method: "POST",
+                            data: {ids: data},
+                            dataType: "html"
+                        });
+                        request.done(function (msg) {
+                            load_data(msg);
+                        });
+                    } else {
+                        $("#msg").text("There is nothing on the cart");
+                    }
+                });
+
+
+                function get_products_on_cart() {
+            <% Cookie cookies[] = request.getCookies(); %>
+            <% String data = "";%>
+            <% for (int i = 0; i < cookies.length; i++) { %>
+            <% Cookie c = cookies[i]; %>
+            <%if (c.getName().startsWith("product")) {
+                    int n = Integer.parseInt(c.getName().replace("product", ""));
+                    data += n + ",";
+                }%>
+            <%}%>
+                    return "<%= data %>";
+                }
 
         </script>
     </body>
