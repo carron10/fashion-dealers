@@ -53,42 +53,42 @@
                 <h5 style=" padding:50px; color: #ffffff"><b><i class=" fa fa-shopping-cart"></i> Shopping Cart</b>
                     <p>Home/<span style=" color: #ff0000">cart</span></p></h5>
             </div>
-            
-            <table border="1">
-                <thead>
+            <div class=" container">
+            <table class="table table-bordered">
+                <thead class="thead-light">
                     <tr>
-                        <th>Image</th>
-                        <th>Name</th>
-                        <th>Model</th>
-                        <th>Unit Price</th>
-                        <th>Quantity</th>
-                        <th>Total</th>
-                        <th>Remove</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">Unit Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Remove</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td style="width:150px; height:150px;"><img src="image/women/images%20(35).jpeg"></td>
+                        <td>Ladies Shirts</td>
+                        <td>112</td>
+                        <td>$10</td>
+                        <td>1</td>
+                        <td>$10</td>
+                        <td><button class="btn btn-link fa fa-remove"></button></td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                         <td style="width:150px; height:150px;"><img src="image/women/images%20(35).jpeg"></td>
+                        <td>Ladies Shirts</td>
+                        <td>112</td>
+                        <td>$10</td>
+                        <td>1</td>
+                        <td>$10</td>
+                        <td><button class="btn btn-link fa fa-remove"></button></td>
                     </tr>
                 </tbody>
             </table>
 
-           
+            </div>
         </div>
         <!--The end of the body-->
 
