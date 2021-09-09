@@ -402,13 +402,17 @@
             <% Cookie c = cookies[i]; %>
             <%if (c.getName().startsWith("product")) {
                     int n = Integer.parseInt(c.getName().replace("product", ""));
-                    data += n + ",";
+                    if(i!=cookies.length-1){
+                        data += n + ",";
+                    }else{
+                        data += n;
+                    }
                 }%>
             <%}%>
                     return "<%if (!data.isEmpty()) {%> <%= data%> "<%} else {%> null <%}%>;
                 }
 
-                function getCookie(cname) {
+                function getCookie(cname){
                     let name = cname + "=";
                     let ca = document.cookie.split(';');
                     for (let i = 0; i < ca.length; i++) {
