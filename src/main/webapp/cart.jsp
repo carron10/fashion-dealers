@@ -299,7 +299,7 @@
 
                     </tbody>
                 </table>
-                <div id="msg"></div>
+
                 <div class=" row">
                     <div class="col-sm-4">
 
@@ -308,7 +308,7 @@
 
                     </div>
                     <div class="col-sm-4">
-                        <table class="table table-bordered " id="totals-table" style=" display: none">
+                        <table class="table table-bordered " id="totals-table" style=" display:none">
                             <thead class="thead-light">
                                 <tr>
                                     <th scope="col">Sub total</th>
@@ -359,22 +359,22 @@
                         var product_id = x.products[i].p_id;
                         var description = x.products[i].description;
                         var data = "";
-                        data += "<tr>" +
+                        data += "<tr id=\"product"+product_id+"\">" +
                                 "<td><img src=\"image/" + picture + "\" alt=\"" + name + "\" style=\"width:80px; height:80px;\"></td>"
                                 + "<td>" + name + "</td>"
                                 + "<td>" + product_id + "</td>"
                                 + "<td>" + price + "</td>"
-                                + "<td><input type=\"text\" class=\"form-control form-control-sm\"  value=\"1\" </td>"
+                                + "<td><input type=\"text\" class=\"form-control form-control-sm\"  value=\"" + getCookie('product' + product_id) + "\" </td>"
                                 + "<td>" + price + "</td>"
-                                + "<td><button class=\"btn btn-link fa fa-remove\"></button></td>" +
+                                + "<td><button onclick=\"removeCookie('product" + product_id + "')\" class=\"btn btn-link fa fa-remove\"></button></td>" +
                                 "</tr>";
 
                         content += data;
                     }
                     if (content !== "") {
                         $("#contents").html(content);
-                        $("#totals-table").css("display", "block");
-                        $("#summary-table").css("display", "block");
+                        $("#totals-table").css("display", "inherit");
+                        $("#summary-table").css("display", "inherit");
                     }
                 }
                 $(document).ready(function () {
@@ -405,9 +405,28 @@
                     data += n + ",";
                 }%>
             <%}%>
-                    return "<%= data %>";
+                    return "<%if (!data.isEmpty()) {%> <%= data%> "<%} else {%> null <%}%>;
                 }
 
+                function getCookie(cname) {
+                    let name = cname + "=";
+                    let ca = document.cookie.split(';');
+                    for (let i = 0; i < ca.length; i++) {
+                        let c = ca[i];
+                        while (c.charAt(0) === ' ') {
+                            c = c.substring(1);
+                        }
+                        if (c.indexOf(name) === 0) {
+                            return c.substring(name.length, c.length);
+                        }
+                    }
+                    return "";
+                }
+                function removeCookie(cname) {
+                    document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                    $("#"+cname).hide();
+                    updateCart();
+                }
         </script>
     </body>
 </html>
