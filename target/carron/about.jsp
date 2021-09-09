@@ -287,7 +287,7 @@
                                     <img src="img/3.jpg" alt="">
                                 </div>
                                 <div class="team-desc">
-                                    <h3>Naison Ndlovu</h3>
+                                    <h3>Amazing Maphosa</h3>
                                     <span>Finanace Manager</span>
                                     <a href="#" class=""><i class="fa fa-facebook"></i></a>
                                     <a href="#" class=""><i class="fa fa-twitter"></i></a>
@@ -304,8 +304,8 @@
                                     <img src="img/3.jpg" alt="">
                                 </div>
                                 <div class="team-desc">
-                                    <h3>Desire KKKKKK</h3>
-                                    <span>Information and this this</span>
+                                    <h3>Blessed</h3>
+                                    <span>Market Manager</span>
                                     <a href="#"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>
                                     <a href="#"><i class="fa fa-linkedin"></i></a>
@@ -322,7 +322,7 @@
                                 </div>
                                 <div class="team-desc">
                                     <h3>Someone SSS</h3>
-                                    <span>Just a Student</span>
+                                    <span>Assistant Finanace Manager</span>
                                     <a href="#" class=""><i class="fa fa-facebook"></i></a>
                                     <a href="#" class=""><i class="fa fa-twitter"></i></a>
                                     <a href="#" class=""><i class="fa fa-linkedin"></i></a>
@@ -339,7 +339,7 @@
                                 </div>
                                 <div class="team-desc">
                                     <h3>Noone M</h3>
-                                    <span>Class Rep(kkk)</span>
+                                    <span>Operation Manager</span>
                                     <a href="#" class=""><i class="fa fa-facebook"></i></a>
                                     <a href="#" class=""><i class="fa fa-twitter"></i></a>
                                     <a href="#" class=""><i class="fa fa-linkedin"></i></a>
@@ -360,14 +360,14 @@
                                     <img src="img/3.jpg" alt="">
                                 </div>
                                 <div class="team-desc">
-                                    <h3>Naison Ndlovu</h3>
-                                    <span>Students Affairs</span>
+                                    <h3>Parie ..</h3>
+                                    <span>Employeee</span>
                                     <a href="#" class=""><i class="fa fa-facebook"></i></a>
                                     <a href="#" class=""><i class="fa fa-twitter"></i></a>
                                     <a href="#" class=""><i class="fa fa-linkedin"></i></a>
                                     <a href="#" class=""><i class="fa fa-instagram"></i></a>
                                     <a href="#" class=""><i class="fa fa-dribbble"></i></a>
-                                    <p>Am happy to be part of Src...Hey Naison(Here you put your BIO  kkkkk)</p>
+                                    <p>.........................................................</p>
                                 </div>
                             </div>
                         </div>
@@ -377,8 +377,8 @@
                                     <img src="img/3.jpg" alt="">
                                 </div>
                                 <div class="team-desc">
-                                    <h3>Desire KKKKKK</h3>
-                                    <span>Information and this this</span>
+                                    <h3>Tinashe</h3>
+                                    <span>Employee 2</span>
                                     <a href="#" class=""><i class="fa fa-facebook"></i></a>
                                     <a href="#" class=""><i class="fa fa-twitter"></i></a>
                                     <a href="#" class=""><i class="fa fa-linkedin"></i></a>
@@ -394,7 +394,7 @@
                                     <img src="img/3.jpg" alt="">
                                 </div>
                                 <div class="team-desc">
-                                    <h3>Someone SSS</h3>
+                                    <h3>Simba ......</h3>
                                     <span>Human Resouser</span>
                                     <a href="#" class=""><i class="fa fa-facebook"></i></a>
                                     <a href="#" class=""><i class="fa fa-twitter"></i></a>
@@ -412,7 +412,7 @@
                                 </div>
                                 <div class="team-desc">
                                     <h3>Carron Muleya</h3>
-                                    <span>Finance Manager</span>
+                                    <span>-----------------</span>
                                     <a href="#" class=""><i class="fa fa-facebook"></i></a>
                                     <a href="#" class=""><i class="fa fa-twitter"></i></a>
                                     <a href="#" class=""><i class="fa fa-linkedin"></i></a>

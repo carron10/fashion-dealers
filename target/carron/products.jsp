@@ -108,7 +108,7 @@
             }
         }
         $(document).ready(function () {
-            loader("start");
+          
             var request = $.ajax({
                 url: "/get_products",
                 method: "POST",
