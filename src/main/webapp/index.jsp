@@ -100,10 +100,10 @@ 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
             </div>
             <div class=" row categories">
                 <div class="category">
-                    <img src="image/Fashion.jpg" style=" height: 90%; width: 100%">
+                    <img src="image/images (36).jpeg" style=" height: 90%; width: 100%">
                     <div class=" card">
                         <div class=" card-footer">
-                            Men Wear
+                            All Wear
                         </div>
                     </div>
                 </div>
