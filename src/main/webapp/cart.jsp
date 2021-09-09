@@ -279,6 +279,10 @@
                     <p>Home/<span style=" color: #ff0000">cart</span></p></h5>
             </div>
             <div class=" container">
+                <br>
+                
+                <h4 class="fa fa-shopping-cart"> SHOPPING CART</h4>
+                <hr>
                 <table class="table table-bordered">
                     <thead class="thead-light">
                         <tr>
@@ -293,7 +297,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="width:100px; height:100px;"><img src="image/women/images%20(35).jpeg"></td>
+                            <td ><img src="image/women/images%20(35).jpeg" style="width:80px; height:80px;"></td>
                             <td>Ladies Shirts</td>
                             <td>112</td>
                             <td>$10</td>
@@ -302,7 +306,7 @@
                             <td><button class="btn btn-link fa fa-remove"></button></td>
                         </tr>
                         <tr>
-                            <td style="width:100px; height:100px;"><img src="image/women/images%20(35).jpeg"></td>
+                            <td><img src="image/women/images%20(35).jpeg" style="width:80px; height:80px;"></td>
                             <td>Ladies Shirts</td>
                             <td>112</td>
                             <td>$10</td>
@@ -315,13 +319,13 @@
                 <div class=" row">
 
 
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-sm-4">
 
                     </div>
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-sm-4">
 
                     </div>
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-sm-4">
                         <table class="table table-bordered">
                             <thead class="thead-light">
                                 <tr>
@@ -334,15 +338,15 @@
                                     <td>Delivery Fee</td>
                                     <td>$3</td>
                                 </tr>
-                                <tr class="thead-light">
+                                <tr class="trow-light">
                                     <td>TOTAL:</td>
                                     <td>$23</td>
                                 </tr>
                             </tbody>
                         </table>
-                        <div class="d-flex align-content-between justify-content-between" style=" width: 100%">
-                            <div><a href="products.jsp" class="btn">Continue Shopping</a></div>
-                            <div><a href="checkout.jsp" class="btn fa fa-shopping-cart bg-danger">Check Out</a></div>
+                        <div class="d-flex  justify-content-between mb-5" style=" width: 100%">
+                            <div><a href="products.jsp" class=" border p-2">Continue Shopping</a></div>
+                            <div><a href="checkout.jsp" class="border p-2 bg-danger"> <i class="fa fa-shopping-cart"></i> Check Out</a></div>
                         </div>
 
                     </div>
