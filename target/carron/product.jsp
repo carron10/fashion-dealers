@@ -27,10 +27,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-2 sidenav">
-
-        </div>
-</div>
+      
     <div id="layoutAuthentication_footer" >
         <footer class="py-4 bg-light">
             <div class="container-fluid px-4">
@@ -63,7 +60,7 @@
                 var description = x.product[i].description;
                 content = "<div class=\" card\">\n" +
                         "                            <div class=\" card-body\">\n" +
-                        "                                <img src=\"image/" + picture + "\" width=\"100%\" height=\"60%\" alt=\"login_background\"/>\n" +
+                        "                                <img src=\"image/" + picture + "\" width=\"100%\" height=\"40%\" alt=\"login_background\"/>\n" +
                         "                            </div>\n" +
                         "                            <div class=\"card-footer\">\n" +
                         "                                <p><strong>Product:</strong><span>" + name + "</span><br>\n" +
