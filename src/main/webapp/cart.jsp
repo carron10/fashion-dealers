@@ -299,6 +299,7 @@
 
                     </tbody>
                 </table>
+                <div id="msg"></div>
                 <div class=" row">
                     <div class="col-sm-4">
 
@@ -377,15 +378,20 @@
                 }
             }
             $(document).ready(function () {
-                var request = $.ajax({
-                    url: "/get_product_list",
-                    method: "POST",
-                    data: {ids: get_products_on_cart()},
-                    dataType: "html"
-                });
-                request.done(function (msg) {
-                    load_data(msg);
-                });
+                var data = get_products_on_cart();
+                if (data !== null) {
+                    var request = $.ajax({
+                        url: "/get_product_list",
+                        method: "POST",
+                        data: {ids: data},
+                        dataType: "html"
+                    });
+                    request.done(function (msg) {
+                        load_data(msg);
+                    });
+                }else{
+                    $("#msg").text("There is nothing on the cart");
+                }
             });
 
 
@@ -399,8 +405,8 @@
                         c = c.substring(1);
                     }
                     if (c.startsWith("product")) {
-                        
-                        data = +c+",";
+
+                        data = +c + ",";
                         j++;
                     }
                 }
