@@ -50,9 +50,43 @@
             </style>
             <!-- Start of the body -->
             <div style=" background-color: #666666; height: 135px; width: 100%; text-align: center" class="container-fluid text-center">
-                <h5 style=" padding:50px; color: #ffffff"><b><i class=" fa fa-shopping-cart"></i>Shopping Cart</b>
+                <h5 style=" padding:50px; color: #ffffff"><b><i class=" fa fa-shopping-cart"></i> Shopping Cart</b>
                     <p>Home/<span style=" color: #ff0000">cart</span></p></h5>
             </div>
+            
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Model</th>
+                        <th>Unit Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
 
            
         </div>

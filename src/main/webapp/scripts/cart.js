@@ -9,7 +9,11 @@ function updateCart() {
     let ca = document.cookie.split(';');
     var j=0;
     for (let i = 0; i < ca.length; i++) {
-        if(ca[i].startsWith("product")){
+        let c = ca[i];
+    while (c.charAt(0) ===' ') {
+      c = c.substring(1);
+    }
+        if(c.startsWith("product")){
             j++;
         }
     }
